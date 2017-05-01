@@ -99,3 +99,8 @@ ENV/
 
 # mkdocs documentation
 /site
+
+# --- Earthlab Folders ---
+src/
+data/
+TESTING.ipynb
