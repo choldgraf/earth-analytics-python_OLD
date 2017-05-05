@@ -1,3 +1,13 @@
 -e git://github.com/data-8/connector-instructors.git#egg=connectortools
 nbgrader
-dropbox
+mne
+rasterstats
+geocoder
+contextily
+
+# With conda-forge
+cartopy
+geopandas
+rasterio
+contextily
+pysal
