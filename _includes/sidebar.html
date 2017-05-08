@@ -1,0 +1,113 @@
+{% include base_path %}
+
+{% if page.author_profile or layout.author_profile or page.sidebar or page.class-lesson %}
+  <div class="sidebar sticky">
+  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
+  {% if page.sidebar %}
+    {% for s in page.sidebar %}
+      {% if s.image %}
+        <img src=
+        {% if s.image contains "://" %}
+          "{{ s.image }}"
+        {% else %}
+          "{{ s.image | prepend: "/images/" | prepend: base_path }}"
+        {% endif %}
+        alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
+      {% endif %}
+      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
+      {% if s.text %}{{ s.text | markdownify }}{% endif %}
+    {% endfor %}
+    {% if page.sidebar.nav %}
+      {% include nav_list nav=page.sidebar.nav %}
+    {% endif %}
+
+    {% if page.class-lesson %}
+     <!--  This is the code that populates the side bar navigation if there is a class-->
+      {% include sidebar_class_navigation_week.html %}
+    {% endif %}
+
+    {% if page.module %}
+    <!--  If it's not attached to a class, just show the lessons and slides-->
+      {% include module_navigation.html %}
+    {% endif %}
+    {% if page.week-landing %}
+     <!--  This is the code that populates the side bar navigation if there is a class-->
+      {% include sidebar_class_navigation_week.html %}
+
+    {% endif %}
+
+  {% endif %}
+  </div>
+{% endif %}
+
+
+{% if page.lang or page.language or page.library %}
+<div class="sidebar sticky">
+  <nav class="nav__list">
+    <ul>
+      <li><span class="nav__sub-title">Language</span>
+        <ul>
+          {% for member in site.data.libs %}
+
+          {% assign counter = 0 %}
+          <!-- this code counts the number of posts associated with the member -->
+          {% for post in site.posts %}
+
+          	{% if post.lang contains member.lang %}
+          	{% assign counter = counter | plus: 1 %}
+          	{% endif %}
+          {% endfor %}
+            {% if page.language == member.lang %}
+
+              {% if page.library %}
+              <li><a href={{ site.url }}{{ site.baseurl }}/tutorials/{{ member.lang }}>{{ member.lang }} ({{ counter }})</a></li>
+              {% else %}
+              <li><a href={{ site.url }}{{ site.baseurl }}/tutorials/{{ member.lang }} class='active' >{{ member.lang }} ({{ counter }})</a></li>
+              {% endif %}
+
+              {% else %}
+              <li><a href={{ site.url }}{{ site.baseurl }}/tutorials/{{ member.lang }}>{{ member.lang }} ({{ counter }})</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+
+<!-- list tutorials by library -->
+
+{% unless page.layout contains 'single' %}
+  {% for member in site.data.libs %}
+    {% if page.language == member.lang %}
+      <ul>
+        <li><span class="nav__sub-title">{{ member.lang }} library</span>
+          <ul>
+        {% for lib in member.libs %}
+          {% assign counter = 0 %}
+       <!-- this code counts the number of posts associated with the member -->
+            {% for post in site.posts %}
+              {% if post.lib contains lib %}
+              {% assign counter = counter | plus: 1 %}
+              {% endif %}
+            {% endfor %}
+
+            {% if page.library == lib %}
+            <li><a href={{ site.url }}{{ site.baseurl }}/tutorials/{{ member.lang }}/{{ lib }} class='active'>{{ lib }} ({{ counter }})</a></li>
+            {% else %}
+            <li><a href={{ site.url }}{{ site.baseurl }}/tutorials/{{ member.lang }}/{{ lib }}>{{ lib }} ({{ counter }})</a></li>
+            {% endif %}
+        {% endfor %}
+      </ul>
+      {% endif %}
+  {% endfor %}
+{% endunless %}
+<!-- end language side bar nav -->
+
+</nav>
+
+</div>
+{% endif %}
+
+<!-- begin science / science themes side bar nav -->
+{% if page.topics and page.layout == 'post-by-category' %}
+  {% include sidebar_topics.html %}
+{% endif %}
