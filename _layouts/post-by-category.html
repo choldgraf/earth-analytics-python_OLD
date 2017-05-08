@@ -1,0 +1,136 @@
+---
+layout: default
+---
+
+{% if (page.header.overlay_color or page.header.overlay_image) or page.header.image %}
+  {% include page__hero.html %}
+{% endif %}
+
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <div class="archive">
+    {% unless page.header.overlay_color or page.header.overlay_image %}
+      <h1 class="page__title">{{ page.title }}</h1>
+    {% endunless %}
+    {{ content }}
+
+    <!-- List all posts in the page category  -->
+
+
+
+      {% if page.langSide %}
+
+      <!-- Only list posts where language = page.lang -->
+      {% for post in site.posts %}
+        {% if page.library %}
+          {% if post.lib contains page.library %}
+          <div class="list__item">
+            <article class="archive__item" >
+            <h2 class="archive__item-title"><a href="{{ site.baseurl }}{{ post.url}}">{{ post.title }}</a></h2>
+            <p class="archive__item-excerpt">{{ post.excerpt }}</p>
+          </article>
+        </div>
+          {% endif %}
+        {% else %}
+        {% if page.language %}
+         {% if post.lang contains page.language %}
+         <div class="list__item">
+           <article class="archive__item">
+             <h2 class="archive__item-title"><a href="{{ site.baseurl }}{{ post.url}}">{{ post.title }}</a></h2>
+             <p class="archive__item-excerpt">{{ post.excerpt }}</p>
+           </article>
+         </div>
+         {% endif %}
+
+        {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% else %}
+        {% for post in site.categories.[page.category] %}
+      <!-- List all posts in the page category  -->
+      <!-- Somehow loop through each class lesson and count - right now i'm not including category on series pages -->
+      <div class="list__item">
+        <article class="archive__item">
+          <h2 class="archive__item-title"><a href="{{ site.baseurl }}{{ post.url}}">{{ post.title }}</a></h2>
+          <p class="archive__item-excerpt">{{ post.excerpt }}</p>
+        </article>
+      </div>
+        {% endfor %}
+
+      {% endif %}
+
+
+
+      <!-- If the page is a tag2 page    -->
+    {% if page.layout == 'post-by-category' and page.topics %}
+
+    <!--
+    TO DO - in the post by cat layout page.
+    <ul>
+      <ol>cleanup</ol>
+      <ol>Then add a sort by language to the page</ol>
+      <ol>then implement the javascript css to hide and show code chunks... NOTE: this is risky across browsers...</ol>
+    </ul>
+
+    Filter by language: <nav>
+      <a href="#allposts">All posts</a>
+      {% for language in site.data.libs %}
+       <a href='#{{ language.lang }}'>{{ language.lang }}</a>
+      {% endfor %}
+    </nav> -->
+
+        {% for post in site.posts %}
+        {{ post.lang-lib[r] }}
+
+         {% endfor %}
+
+
+        <!-- Using downcase to force this to an array so i can use contains below
+        i'm not really sure why the text == text argument doesn't work but if i
+        force one element to an array i can use contains and it works -->
+    {% assign the_tag = page.topics | first | downcase %}
+    {% for post in site.posts %}
+    {% if post.topics %}
+      {% for tag in post.topics %}
+      {% assign atag = tag | first | downcase %}
+         {% if the_tag contains atag %}
+          {% if page.is-main-topic %}
+           <div class="list__item">
+             <article class="archive__item">
+               <h2 class="archive__item-title"><a href="{{ site.baseurl }}{{ post.url}}">{{ post.title }}</a></h2>
+               <p class="archive__item-excerpt">{{ post.excerpt }}</p>
+               <p class="archive__item-excerpt"><i>last updated: {{ post.modified | replace: "'", "" | date_to_string }}</i></p>
+             </article>
+           </div>
+           {% else %}
+           <!-- If the page is a subtag landing page just list the posts for the subtag -->
+             {% for page_subtag in page.topics %}
+                {% for post_subtag in post.topics %}
+                 {% if post_subtag.last contains page_subtag.last %}
+                 <div class="list__item">
+                   <article class="archive__item">
+                     <h2 class="archive__item-title"><a href="{{ site.baseurl }}{{ post.url}}">{{ post.title }}</a></h2>
+                     <p class="archive__item-excerpt">{{ post.excerpt }}</p>
+                     <p class="archive__item-excerpt"><i>last updated: {{ post.modified | replace: "'", "" | date_to_string }}</i></p>
+                   </article>
+                 </div>
+                 {% endif %}
+              {% endfor %}
+             {% endfor %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% endfor %}
+  {% endif %}
+  </div>
+</div>
