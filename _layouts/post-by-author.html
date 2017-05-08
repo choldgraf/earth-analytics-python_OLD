@@ -43,7 +43,7 @@ layout: default
           <p class='archive__item-excerpt'>{{ module.module-description }}</p>
 
           {% assign counter = 0 %}
-          {% for post in site.categories.['course-materials'] %}
+          {% for post in site.categories['course-materials'] %}
               {% if post.class-lesson == module.class-lesson %}
                 {% assign counter = counter | plus: 1 %}
               {% endif %}

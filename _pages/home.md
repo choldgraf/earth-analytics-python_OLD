@@ -83,7 +83,7 @@ available on our site with more under development!
 
 ## Recent tutorials
 
-{% for post in site.categories.['tutorials'] limit:3 %}
+{% for post in site.categories['tutorials'] limit:3 %}
 <!-- List the most recent 3 tutorials  -->
 <div class="list__item">
 <article class="archive__item">
