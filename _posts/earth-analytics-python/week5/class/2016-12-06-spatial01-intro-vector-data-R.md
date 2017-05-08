@@ -4,15 +4,14 @@ title: "GIS in R: intro to vector format spatial data - points, lines and polygo
 excerpt: "This lesson introduces what vector data are and how to open vector data stored in
 shapefile format in R. "
 authors: ['Leah Wasser']
-modified: '2017-01-01'
+modified: '2017-05-08'
 category: [course-materials]
-class-lesson: ['class-intro-spatial-r']
-permalink: /course-materials/earth-analytics/week-5/intro-vector-data-r/
-nav-title: 'Vector data in R'
+class-lesson: ['class-intro-spatial-python']
+permalink: /course-materials/earth-analytics-python/week-5/intro-vector-data-r/
+nav-title: 'Vector data in Python'
 module-title: 'Spatial data in R and remote sensing uncertainty'
-module-description: 'This tutorial covers the basic principles of LiDAR remote sensing and
-the three commonly used data products: the digital elevation model, digital surface model and the canopy height model. Finally it walks through opening lidar derived raster data in R / RStudio'
-module-nav-title: 'Spatial Data in R'
+module-description: 'This tutorial Introduces vector data in Python.'
+module-nav-title: 'Spatial Data in Python'
 module-type: 'class'
 week: 5
 sidebar:
@@ -22,6 +21,8 @@ comments: true
 order: 1
 ---
 
+NOTES
+* date time needs to render out to a date not be a date time call in python
 
 
 {% include toc title="In This Lesson" icon="file-text" %}
@@ -110,11 +111,24 @@ line is composed of a series of segments, each "bend" in the road or stream
 
 represents a vertex that has defined `x, y` location.
 
-* **Polygons:** A polygon consists of 3 or more vertices that are connected and "closed". Thus the outlines of plot boundaries, lakes, oceans, and states or countries are often represented by polygons. Occasionally, a polygon can have a hole in the middle of it (like a doughnut), this is something to be aware of but not an issue we will deal with in this tutorial.
+* **Polygons:** A polygon consists of 3 or more vertices that are connected and
+
+"closed". Thus the outlines of plot boundaries, lakes, oceans, and states or
+
+countries are often represented by polygons. Occasionally, a polygon can have a
+
+hole in the middle of it (like a doughnut), this is something to be aware of but
+
+not an issue we will deal with in this tutorial.
 
 
 
-<i class="fa fa-star"></i> **Data Tip:** Sometimes, boundary layers such as states and countries, are stored as lines rather than polygons. However, these boundaries, when represented as a line, will not create a closed object with a defined "area" that can be "filled".
+ <i class="fa fa-star"></i> **Data Tip:** Sometimes, boundary layers such as
+
+ states and countries, are stored as lines rather than polygons. However, these
+
+ boundaries, when represented as a line, will not create a closed object with a defined "area" that can be "filled".
+
 {: .notice}
 
 
@@ -161,11 +175,6 @@ We will use the `rgdal` package to work with vector data in `R`. Notice that the
 
 
 
-
-
-```python
-
-```
 
 
 ```python
@@ -815,7 +824,7 @@ ax.set_title('SJER Plot Locations\nMadera County, CA')
 
 
 
-![png](output_14_1.png)
+![png](output_13_1.png)
 
 
 
@@ -990,7 +999,7 @@ sjer_plot_locations.plot(ax=ax, markersize=10, color='r')
 
 
 
-![png](output_18_1.png)
+![png](output_17_1.png)
 
 
 
@@ -1008,7 +1017,7 @@ sjer_plot_locations.plot(ax=ax, markersize=10, color='r')
 
 
 
-![png](output_19_1.png)
+![png](output_18_1.png)
 
 
 
