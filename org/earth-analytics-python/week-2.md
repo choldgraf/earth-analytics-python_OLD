@@ -248,7 +248,7 @@ formats by Wed 1 February 2017 @ NOON**
 | Plot is described and interpreted in the text of the report with reference made to how the data demonstrate an impact or driver of the flood event. | NA | Plot is not interpreted in the text. |
 
 
-**PLOT 5 (GRAD STUDENTS ONLY, bonus points for undergrads): a plot of precipitation that spans from 1948 - 2013**
+**PLOT 5 (GRAD STUDENTS ONLY, bonus points for undergrads): a plot of precipitation that spans from 1948 - 2013** 
 
 | 5 points | 3 Points | 0 Points|
 |---|---|---|---|

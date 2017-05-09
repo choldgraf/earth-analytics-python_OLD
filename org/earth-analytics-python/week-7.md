@@ -2,7 +2,7 @@
 layout: single
 category: course-materials
 title: "Week 7"
-permalink: /course-materials/earth-analytics/week-7/
+permalink: /course-materials/earth-analytics-python/week-7/
 week-landing: 7
 week: 7
 sidebar:
@@ -99,7 +99,7 @@ fire. For each map be sure to:
 
 Use this figure to help answer question 1 above.
 An example of what this plot should look like (without all of the labels that
-you need to add), [is here at the bottom of the page.]({{ site.url }}/course-materials/earth-analytics/week-7/grid-of-plots-report/)
+you need to add), [is here at the bottom of the page.]({{ site.url }}/course-materials/earth-analytics-python/week-7/grid-of-plots-report/)
 
 #### Plot 2 - Pre-fire NBR using landsat data
 

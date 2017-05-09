@@ -2,7 +2,7 @@
 layout: single
 category: course-materials
 title: "Week 11"
-permalink: /course-materials/earth-analytics/week-11/
+permalink: /course-materials/earth-analytics-python/week-11/
 week-landing: 11
 week: 11
 sidebar:
