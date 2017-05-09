@@ -2,7 +2,7 @@
 layout: single
 category: course-materials
 title: "Mid term & Final"
-permalink: /course-materials/earth-analytics/mid-term/
+permalink: /course-materials/earth-analytics-python/mid-term/
 sidebar:
   nav: earth-analytics-2017
 comments: false

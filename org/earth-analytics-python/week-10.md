@@ -2,7 +2,7 @@
 layout: single
 category: course-materials
 title: "Week 10"
-permalink: /course-materials/earth-analytics/week-10/
+permalink: /course-materials/earth-analytics-python/week-10/
 week-landing: 10
 week: 10
 sidebar:
@@ -79,7 +79,7 @@ Plot the following:
 
 Experience (x axis) vs. salary (y axis). Color your points by SEX and use facets
 to add a facet for each of the three ranks. Your plot should look like the
-one on the bottom of [this page]( {{ site.url }}/course-materials/earth-analytics/week-10/get-data-with-rcurl-r/#example-homework-plot).
+one on the bottom of [this page]( {{ site.url }}/course-materials/earth-analytics-python/week-10/get-data-with-rcurl-r/#example-homework-plot).
 
 <a href="http://data.princeton.edu/wws509/datasets/#salary" target="_blank">Learn more about the Princeton salary data</a>
 
@@ -108,7 +108,7 @@ in this case rank) using the `facet_wrap()` argument in a ggplot plot. For examp
 #### Plot 2
 
 Use the `read_secure_csv_file()` function to import the gapminder data following
- [this lesson]({{ site.url }}/course-materials/earth-analytics/week-10/access-gapminder-data-rcurl-r/)
+ [this lesson]({{ site.url }}/course-materials/earth-analytics-python/week-10/access-gapminder-data-rcurl-r/)
 Then create a plot using the `ggplot()` of two variables of interest. You can
 pick any variables that you want to plot together but do not use variables that
 we demonstrate in the online lessons!

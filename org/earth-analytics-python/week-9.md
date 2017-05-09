@@ -2,7 +2,7 @@
 layout: single
 category: course-materials
 title: "Week 9"
-permalink: /course-materials/earth-analytics/week-9/
+permalink: /course-materials/earth-analytics-python/week-9/
 week-landing: 9
 week: 9
 sidebar:
@@ -50,7 +50,7 @@ View Slideshow: Review slides </a>
 Your task for this week is to prepare for your mid-term presentation & quiz.
 Both will be performed in class NEXT WEEK.
 
-* [Review the mid term assignment page which contains a suggested study area list.]({{ site.url }}/course-materials/earth-analytics/mid-term/)
+* [Review the mid term assignment page which contains a suggested study area list.]({{ site.url }}/course-materials/earth-analytics-python/mid-term/)
 
 
 

@@ -2,7 +2,7 @@
 layout: single
 category: course-materials
 title: "Example data sources"
-permalink: /course-materials/earth-analytics/data-sources/
+permalink: /course-materials/earth-analytics-python/data-sources/
 sidebar:
   nav: earth-analytics-2017
 comments: true

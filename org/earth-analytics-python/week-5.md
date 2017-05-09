@@ -2,7 +2,7 @@
 layout: single
 category: course-materials
 title: "Week 5"
-permalink: /course-materials/earth-analytics/week-5/
+permalink: /course-materials/earth-analytics-python/week-5/
 week-landing: 5
 week: 5
 sidebar:
@@ -80,7 +80,7 @@ Be sure to describe what each plot shows in your final report.
 Create a basemap that shows the location of the study area within the larger state
 of California / western United States or united states. Pick a spatial extent that
 helps someone from the USA understand where the SJER site is located. HINT: use the
-[lesson from week 3 on `ggmap()` if you forget how to do this]({{ site.url }}/course-materials/earth-analytics/week-3/ggmap-basemap/)!
+[lesson from week 3 on `ggmap()` if you forget how to do this]({{ site.url }}/course-materials/earth-analytics-python/week-3/ggmap-basemap/)!
 
 #### Plot 2 - Study area map 2
 
@@ -96,7 +96,7 @@ of the `sjer_aoi` layer. This means that you may have to CROP and reproject your
 
 #### **BONUS - 1 point**:
 
-Add a **legend** to your roads/ study area plot that shows both the road types and the plot locations. [Use the homework lesson on custom legends]({{ site.url }}/course-materials/earth-analytics/week-5/r-custom-legend/) to help build the legend.
+Add a **legend** to your roads/ study area plot that shows both the road types and the plot locations. [Use the homework lesson on custom legends]({{ site.url }}/course-materials/earth-analytics-python/week-5/r-custom-legend/) to help build the legend.
 
 #### Plot 3 & 4 scatterplots
 Create two scatter plots that compare:

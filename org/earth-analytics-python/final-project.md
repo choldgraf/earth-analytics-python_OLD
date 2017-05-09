@@ -2,7 +2,7 @@
 layout: single
 category: course-materials
 title: "Earth Analytics Final Project"
-permalink: /course-materials/earth-analytics/final-project/
+permalink: /course-materials/earth-analytics-python/final-project/
 sidebar:
   nav: earth-analytics-2017
 comments: false

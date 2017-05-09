@@ -2,7 +2,7 @@
 layout: single
 category: course-materials
 title: "Week 3 - LiDAR Data "
-permalink: /course-materials/earth-analytics/week-3/
+permalink: /course-materials/earth-analytics-python/week-3/
 week-landing: 3
 week: 3
 sidebar:

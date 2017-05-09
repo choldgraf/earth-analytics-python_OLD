@@ -2,7 +2,7 @@
 layout: single
 category: course-materials
 title: "Week 4: Data workflows"
-permalink: /course-materials/earth-analytics/week-4/
+permalink: /course-materials/earth-analytics-python/week-4/
 week-landing: 4
 week: 4
 sidebar:

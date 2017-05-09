@@ -2,7 +2,7 @@
 layout: single
 category: course-materials
 title: "Week 1 - Get Started with Data in R / RStudio"
-permalink: /course-materials/earth-analytics/week-1/
+permalink: /course-materials/earth-analytics-python/week-1/
 week-landing: 1
 week: 1
 sidebar:
@@ -146,8 +146,8 @@ qplot(x=boulder.precip$DATE,
 ```
 
 <figure class="half">
-<a href="/images/rfigs/course-materials/earth-analytics/week-1/intro-knitr-rmd/2016-12-06-Rmd05-knitr/render-plot-1.png">
-<img src="/images/rfigs/course-materials/earth-analytics/week-1/intro-knitr-rmd/2016-12-06-Rmd05-knitr/render-plot-1.png" alt="example of the plot">
+<a href="/images/rfigs/course-materials/earth-analytics-python/week-1/intro-knitr-rmd/2016-12-06-Rmd05-knitr/render-plot-1.png">
+<img src="/images/rfigs/course-materials/earth-analytics-python/week-1/intro-knitr-rmd/2016-12-06-Rmd05-knitr/render-plot-1.png" alt="example of the plot">
 </a>
 <figcaption>
 If your code ran properly, the resulting plot should look like this one.
@@ -156,8 +156,8 @@ If your code ran properly, the resulting plot should look like this one.
 
 
 <figure>
-<a href="/images/course-materials/earth-analytics/week-1/setup-r-rstudio/r-markdown-wk-1.png">
-<img src="/images/course-materials/earth-analytics/week-1/setup-r-rstudio/r-markdown-wk-1.png" alt="R markdown example image.">
+<a href="/images/course-materials/earth-analytics-python/week-1/setup-r-rstudio/r-markdown-wk-1.png">
+<img src="/images/course-materials/earth-analytics-python/week-1/setup-r-rstudio/r-markdown-wk-1.png" alt="R markdown example image.">
 </a>
 <figcaption>
 Your rmarkdown file should look something like the one above (with your own text
@@ -192,15 +192,15 @@ is called something different. Is there a `data` directory within the earth-anal
 directory?
 
 <figure>
-<a href="/images/course-materials/earth-analytics/week-1/setup-r-rstudio/data-dir-wk-1.png">
-<img src="/images/course-materials/earth-analytics/week-1/setup-r-rstudio/data-dir-wk-1.png" alt="data directory example image.">
+<a href="/images/course-materials/earth-analytics-python/week-1/setup-r-rstudio/data-dir-wk-1.png">
+<img src="/images/course-materials/earth-analytics-python/week-1/setup-r-rstudio/data-dir-wk-1.png" alt="data directory example image.">
 </a>
 <figcaption>
 Your working directory should contain a `/data` directory.
 </figcaption>
 </figure>
 
-If not, review the [working directory lesson](/course-materials/earth-analytics/week-1/setup-working-directory/)
+If not, review the [working directory lesson](/course-materials/earth-analytics-python/week-1/setup-working-directory/)
 to ensure your working directory is SETUP properly on your computer and in `RStudio`.
 
 
