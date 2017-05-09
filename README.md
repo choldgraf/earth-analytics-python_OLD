@@ -1,6 +1,13 @@
 # earth-analytics-python
 Space where we convert earth analytics class in R to  python
 
+# Installation
+
+We recommend installing geo-related dependencies with `conda-forge`. Use the following command on a **fresh** python installation:
+
+`conda install -c conda-forge geopandas rasterio pysal`
+# note that We may recommend not using conda forge -- needs more testing
+ 
 ## 1. Clone the repo
 ```
 # clone the repository, , make the site, and serve it.
@@ -38,3 +45,4 @@ Currently, we are using less. to install less
 
 1. install nodejs (npm) https://nodejs.org/en/
 2. install less : `sudo npm install less -g` NOTE: you need administration access to install 
+
