@@ -1,11 +1,19 @@
 """File Input/Output utilities."""
 
-import connectortools as ct
+from download import download
 import os.path as op
 import os
 
-DATA_URLS = {'week_05': 'https://ndownloader.figshare.com/files/7525363'}
-URL_DATA = 'https://www.dropbox.com/sh/n8i01jtyhke5io4/AACK2DQh831C1zzjaY4BRe_2a?dl=1'
+DATA_URLS = {
+    'week_05': ('https://ndownloader.figshare.com/files/7525363', 'ZIPFILE'),
+    'week_02': [('https://ndownloader.figshare.com/files/7010681',
+                 'boulder-precip.csv'),
+                ('https://ndownloader.figshare.com/files/7010681',
+                 'temperature_example.csv')],
+    'week_02-hw': ('https://ndownloader.figshare.com/files/7426738', 'ZIPFILE')
+}
+
+#               destfile = "data/boulder-precip.csv"'}
 HOME = op.join(op.expanduser('~'))
 DATA_NAME = 'data_earthlab'
 
@@ -29,7 +37,7 @@ class EarthlabData(object):
         s = 'Available Datasets: {}'.format(self.data_keys)
         return s
 
-    def get_data(self, key=None, replace=False, zipfile=True):
+    def get_data(self, key=None, name=None, replace=False, zipfile=True):
         """
         Retrieve the data for a given week and return its path.
 
@@ -60,11 +68,25 @@ class EarthlabData(object):
                              "{}\nChoose one of {}".format(
                                 key, DATA_URLS.keys()))
         else:
-            ct.download_file(DATA_URLS[key], key, self.path,
-                             replace=replace, zipfile=zipfile)
-            path_data = op.join(self.path, key)
-            return path_data
-
+            this_data = DATA_URLS[key]
+            if not isinstance(this_data, list):
+                this_data = [this_data]
+            data_paths = []
+            for url, name in this_data:
+                name = key if name is None else name
+                if zipfile is True:
+                    name = key
+                    this_root = self.path
+                else:
+                    this_root = op.join(self.path, key)
+                this_path = download(url, name,
+                                     this_root,
+                                     replace=replace, zipfile=zipfile,
+                                     verbose=False)
+                data_paths.append(this_path)
+            if len(data_paths) == 1:
+                data_paths = data_paths[0]
+            return data_paths
 
 
 def list_files(path, depth=3):
