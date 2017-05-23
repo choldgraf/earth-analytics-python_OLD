@@ -1,9 +1,8 @@
--e git://github.com/data-8/connector-instructors.git#egg=connectortools
+download
 nbgrader
 mne
 rasterstats
 geocoder
-contextily
 
 # With conda-forge
 cartopy
