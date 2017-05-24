@@ -3,6 +3,9 @@
 from download import download
 import os.path as op
 import os
+import matplotlib.pyplot as plt
+
+plt.style.use('ggplot')
 
 DATA_URLS = {
     'week_05': ('https://ndownloader.figshare.com/files/7525363', 'ZIPFILE'),
@@ -15,7 +18,7 @@ DATA_URLS = {
 
 #               destfile = "data/boulder-precip.csv"'}
 HOME = op.join(op.expanduser('~'))
-DATA_NAME = 'data_earthlab'
+DATA_NAME = op.join('earth-analytics', 'data')
 
 
 class EarthlabData(object):
