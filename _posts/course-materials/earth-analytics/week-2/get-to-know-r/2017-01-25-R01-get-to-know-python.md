@@ -49,13 +49,13 @@ You need `R` and `RStudio` to complete this tutorial. Also you should have
 an `earth-analytics` directory setup on your computer with a `/data`
 directory with it.
 
-* [How to Setup R / RStudio](/course-materials/earth-analytics/week-1/setup-r-rstudio/)
-* [Setup your working directory](/course-materials/earth-analytics/week-1/setup-working-directory/)
-* [Intro to the R & RStudio Interface](/course-materials/earth-analytics/week-1/intro-to-r-and-rstudio)
+* [How to Setup R / RStudio](/course-materials/earth-analytics-python/week-1/setup-r-rstudio/)
+* [Setup your working directory](/course-materials/earth-analytics-python/week-1/setup-working-directory/)
+* [Intro to the R & RStudio Interface](/course-materials/earth-analytics-python/week-1/intro-to-r-and-rstudio)
 
 </div>
 
-In the [previous module](/course-materials/earth-analytics/week-1/setup-r-rstudio), we
+In the [previous module](/course-materials/earth-analytics-python/week-1/setup-r-rstudio), we
 setup `RStudio` and `R` and got to know the `RStudio` interface.
 We also created a basic
 `Jupyter notebook` report using `Jupyter`. In this module, we will explore the basic
@@ -240,7 +240,7 @@ data.plot(x='DATE',
 
 
 
-![png](../../../../../images/course-materials/earth-analytics//week-2/get-to-know-r/2017-01-25-R01-get-to-know-python_13_1.png)
+![png](../../../../../images/course-materials/earth-analytics-python//week-2/get-to-know-r/2017-01-25-R01-get-to-know-python_13_1.png)
 
 
 
@@ -486,7 +486,7 @@ data.plot()
 
 
 
-![png](../../../../../images/course-materials/earth-analytics//week-2/get-to-know-r/2017-01-25-R01-get-to-know-python_24_1.png)
+![png](../../../../../images/course-materials/earth-analytics-python//week-2/get-to-know-r/2017-01-25-R01-get-to-know-python_24_1.png)
 
 
 
@@ -504,7 +504,7 @@ data.plot(x='DATE',
 
 
 
-![png](../../../../../images/course-materials/earth-analytics//week-2/get-to-know-r/2017-01-25-R01-get-to-know-python_25_1.png)
+![png](../../../../../images/course-materials/earth-analytics-python//week-2/get-to-know-r/2017-01-25-R01-get-to-know-python_25_1.png)
 
 
 Functions return an output. Sometimes that output is a *figure* like the example

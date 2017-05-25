@@ -5,7 +5,7 @@ excerpt: "."
 authors: ['Data Carpentry', 'Leah Wasser']
 category: [course-materials]
 class-lesson: ['get-to-know-r']
-permalink: /course-materials/earth-analytics/week-2/spreadsheet-data-in-R/
+permalink: /course-materials/earth-analytics-python/week-2/spreadsheet-data-in-R/
 nav-title: 'Spreadsheet Data in R'
 dateCreated: 2016-12-13
 modified: 2017-05-24
@@ -57,9 +57,9 @@ directory with it.
 
 
 
-* [How to Setup R / R Studio](/course-materials/earth-analytics/week-1/setup-r-rstudio/)
+* [How to Setup R / R Studio](/course-materials/earth-analytics-python/week-1/setup-r-rstudio/)
 
-* [Setup your working directory](/course-materials/earth-analytics/week-1/setup-working-directory/)
+* [Setup your working directory](/course-materials/earth-analytics-python/week-1/setup-working-directory/)
 
 
 
@@ -444,7 +444,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics//week-2/get-to-know-r/2017-01-25-R05-spreadsheet-data-r_18_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python//week-2/get-to-know-r/2017-01-25-R05-spreadsheet-data-r_18_0.png)
 
 
 
@@ -457,7 +457,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics//week-2/get-to-know-r/2017-01-25-R05-spreadsheet-data-r_19_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python//week-2/get-to-know-r/2017-01-25-R05-spreadsheet-data-r_19_0.png)
 
 
 

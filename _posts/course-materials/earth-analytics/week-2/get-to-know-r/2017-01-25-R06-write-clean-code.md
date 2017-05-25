@@ -5,7 +5,7 @@ excerpt: "#"
 authors: ['Leah Wasser', 'Data Carpentry']
 category: [course-materials]
 class-lesson: ['get-to-know-r']
-permalink: /course-materials/earth-analytics/week-2/write-clean-code-with-r/
+permalink: /course-materials/earth-analytics-python/week-2/write-clean-code-with-r/
 nav-title: 'Write Clean Code'
 dateCreated: 2016-12-13
 modified: 2017-05-24
@@ -53,9 +53,9 @@ directory with it.
 
 
 
-* [How to Setup R / R Studio](/course-materials/earth-analytics/week-1/setup-r-rstudio/)
+* [How to Setup R / R Studio](/course-materials/earth-analytics-python/week-1/setup-r-rstudio/)
 
-* [Setup your working directory](/course-materials/earth-analytics/week-1/setup-working-directory/)
+* [Setup your working directory](/course-materials/earth-analytics-python/week-1/setup-working-directory/)
 
 
 
@@ -290,7 +290,7 @@ my_data.plot('DATE', 'PRECIP')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics//week-2/get-to-know-r/2017-01-25-R06-write-clean-code_4_1.png)
+![png](../../../../../images/course-materials/earth-analytics-python//week-2/get-to-know-r/2017-01-25-R06-write-clean-code_4_1.png)
 
 
 

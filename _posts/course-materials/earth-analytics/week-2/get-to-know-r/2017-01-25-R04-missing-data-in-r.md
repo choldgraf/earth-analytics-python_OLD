@@ -5,7 +5,7 @@ excerpt: "This tutorial introduces the concept of missing of no data values in R
 authors: ['Data Carpentry', 'Leah Wasser']
 category: [course-materials]
 class-lesson: ['get-to-know-r']
-permalink: /course-materials/earth-analytics/week-2/missing-data-in-r-na/
+permalink: /course-materials/earth-analytics-python/week-2/missing-data-in-r-na/
 nav-title: 'Missing data'
 dateCreated: 2016-12-13
 modified: 2017-05-24
@@ -55,9 +55,9 @@ directory with it.
 
 
 
-* [How to Setup R / R Studio](/course-materials/earth-analytics/week-1/setup-r-rstudio/)
+* [How to Setup R / R Studio](/course-materials/earth-analytics-python/week-1/setup-r-rstudio/)
 
-* [Setup your working directory](/course-materials/earth-analytics/week-1/setup-working-directory/)
+* [Setup your working directory](/course-materials/earth-analytics-python/week-1/setup-working-directory/)
 
 
 
