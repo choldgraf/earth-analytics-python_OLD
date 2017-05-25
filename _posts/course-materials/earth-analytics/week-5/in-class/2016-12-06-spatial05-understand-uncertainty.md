@@ -8,9 +8,6 @@ category: [course-materials]
 class-lesson: ['class-intro-spatial-python']
 permalink: /course-materials/earth-analytics-python/week-5/understand-uncertainty-lidar/
 nav-title: 'Remote sensing uncertainty'
-module-title: 'Uncertainty and metadata'
-module-description: 'In this module, we will discuss the concept of uncertainty as it relates to both remote sensing and other data. We will also explore some metadata to learn how to understand more about our data. '
-module-nav-title: 'Uncertainty in scientific data & metadata '
 module-type: 'class'
 course: "Earth Analytics Python"
 week: 5
@@ -24,7 +21,7 @@ order: 5
 # Lesson Notes
 ##  Is there a way to set the working directory when this builds - that way we can comment this out and in the nbconvert script it forces the working directory - this works best....
 ## Rasterstats needs to be loaded also geocoder and contextily - what do those do?
-# i think we need to be consistent in how we import things. sometimes we are importing parts of a library separately - why? 
+# i think we need to be consistent in how we import things. sometimes we are importing parts of a library separately - why?
 ## All of the plots on this page are visual representations thus the code should be hidden throughout. need to find out how to hide code!
 
 {% include toc title="In This Lesson" icon="file-text" %}
@@ -103,7 +100,7 @@ from glob import glob
 
 import numpy as np
 import geopandas as gpd
-# why import parts of raster io sepearately? 
+# why import parts of raster io sepearately?
 import rasterio as rio
 from rasterio import plot as riop
 import rasterstats as rs
@@ -117,7 +114,7 @@ plt.ion()
 
 ```
 
-## Why do we create a df here  (which i thnjk is better) vs previously we used a numpy array to create a list of xy locations. 
+## Why do we create a df here  (which i thnjk is better) vs previously we used a numpy array to create a list of xy locations.
 ## seems beter to just use pandas if we plan to use geopandas.
 # below why is _ used -- this is different from how we set the axis title etc previously
 
@@ -163,9 +160,9 @@ precision (or lack thereof) of the measurement process.
 
 ```python
 ax = tree_heights.plot.hist(bins=[8, 8.5, 9.6, 10.2, 10.8, 11, 11.5], legend=False)
-ax.set(title="Distribution of measured tree height values", 
+ax.set(title="Distribution of measured tree height values",
        xlabel="Height (m)")
-ax.set_title(ax.get_title(), 
+ax.set_title(ax.get_title(),
              fontsize=20)
 
 ```
@@ -302,17 +299,17 @@ SJER_plots.geom_type.head()
 
 
 
-In this case our plot size is 40m. If we create a circular buffer wiht a 20m diameter it will closely approximate where trees were measured on the ground. 
+In this case our plot size is 40m. If we create a circular buffer wiht a 20m diameter it will closely approximate where trees were measured on the ground.
 
 We can use the .buffer() function to create the buffer. Here the buffer size is specified in the () of the function. We will send the new object to a new shapefile using .to_file() as follows:
 
 `SJER_plots.buffer(20).to_file('path-to-shapefile-here.shp')`
 
-# Below the attributes are not transfered - not sure how to force them to transfer 
+# Below the attributes are not transfered - not sure how to force them to transfer
 
 
 ```python
-# Create a 20m diameter 20m diameter circular buffer arond each point 
+# Create a 20m diameter 20m diameter circular buffer arond each point
 # then export the buffered layer as a polygon shapefile using to_file
 
 #SJER_plots.buffer(20).to_file(plot_buffer_path)
@@ -329,25 +326,25 @@ plot_buffer_path = 'plot_buffer.shp'
 SJER_plots.to_file(plot_buffer_path)
 ```
 
-## Extract pixel values for each plot 
+## Extract pixel values for each plot
 
-Once we have the boundary for each plot location (a 20m diameter circle) we can extract all of the pixels that fall within each circle using the function `zonal_stats` in the `rasterstats` library. 
+Once we have the boundary for each plot location (a 20m diameter circle) we can extract all of the pixels that fall within each circle using the function `zonal_stats` in the `rasterstats` library.
 
 
 
 
 ```python
 # load lidar canopy height model raster  using rasterio
-# note that we are using a context manager - with to do this 
+# note that we are using a context manager - with to do this
 with rio.open('data/week5/california/SJER/2013/lidar/SJER_lidarCHM.tif') as lidar_chm_src:
     # read the data into a numpy array
     # note that the (1) ensures you get a 2 dimensional object rather than 3
-    SJER_chm_data = lidar_chm_src.read(1) 
+    SJER_chm_data = lidar_chm_src.read(1)
     # set CHM values of 0 to NAN
     SJER_chm_data[SJER_chm_data == 0] = np.nan
     profile = lidar_chm_src.profile
 
-    
+
 # SJER_chm = rio.open('data/week5/california/SJER/2013/lidar/SJER_lidarCHM.tif')
 
 # https://mapbox.github.io/rasterio/quickstart.html
@@ -366,7 +363,7 @@ with rio.open('data/week5/california/SJER/2013/lidar/SJER_lidarCHM.tif') as lida
 
 ```python
 # this is a dictionary containing all of the spatial attributes of the geotiff
-profile  
+profile
 
 ```
 
@@ -406,10 +403,10 @@ SJER_chm_data.shape
 ```python
 # assign cleaned lidar path
 lidar_path = 'sjer_chm_zero_removed.tif'
-# write a new geotiff using the spatial attributes of the original data 
+# write a new geotiff using the spatial attributes of the original data
 with rio.open(lidar_path, 'w', **profile) as dst:
-     # astype ensures the output format is correct 
-    dst.write(SJER_chm_data.astype(rio.float32), 1) 
+     # astype ensures the output format is correct
+    dst.write(SJER_chm_data.astype(rio.float32), 1)
 ```
 
     /Users/lewa8222/anaconda/lib/python3.6/site-packages/rasterio/__init__.py:160: FutureWarning: GDAL-style transforms are deprecated and will not be supported in Rasterio 1.0.
@@ -618,8 +615,8 @@ gpd.read_file(plot_buffer_path)
 ```python
 # import new geotiff with 0's removed
 # Extract zonal stats
-sjer_tree_heights = rs.zonal_stats(plot_buffer_path, 
-            lidar_path, 
+sjer_tree_heights = rs.zonal_stats(plot_buffer_path,
+            lidar_path,
             geojson_out=True,
             copy_properties=True,
             stats="count min mean max median")
@@ -2044,7 +2041,7 @@ sjer_tree_heights
 
 
 ```python
-# turn extracted data into a pandas geo data frame 
+# turn extracted data into a pandas geo data frame
 SJER_lidar_height_df = gpd.GeoDataFrame.from_features(sjer_tree_heights)
 SJER_lidar_height_df.head()
 ```
@@ -2154,9 +2151,9 @@ SJER_lidar_height_df.head()
 #SJER_chm.
 ```
 
-# not sure what the .transform component does 
-#stats = rs.zonal_stats(SJER_plots, 
-#                       lidar_tif_path, 
+# not sure what the .transform component does
+#stats = rs.zonal_stats(SJER_plots,
+#                       lidar_tif_path,
 #                       geojson_out=True,
 #                       tranform=SJER_chm.transform)
 #http://pythonhosted.org/rasterstats/
@@ -2338,10 +2335,10 @@ SJER_insitu.head()
 
 
 
-We want to calculate a summary value of max tree height (the tallest tree measured) in each plot. 
+We want to calculate a summary value of max tree height (the tallest tree measured) in each plot.
 We have a unique id for each plot - **plotid** that we can use to group the data. The tree height values themselves are located in the **stemheight** column.
 
-We can calculate this by using the .groupy() method in pandas. Note that the statement below 
+We can calculate this by using the .groupy() method in pandas. Note that the statement below
 
 ## what is reset_index??
 
@@ -2349,7 +2346,7 @@ We can calculate this by using the .groupy() method in pandas. Note that the sta
 ```python
 ## extract max tree height for each plot
 insitu_stem_height = SJER_insitu.groupby('plotid').max()['stemheight'].reset_index()
-# view the top 
+# view the top
 insitu_stem_height
 ```
 
@@ -2462,9 +2459,9 @@ insitu_stem_height
 
 
 
-Note that now we have the maximum tree height value for each field plot where 
-we measured trees. Next we can join the 
-measured tree height data that we summarized above with the maximum tree 
+Note that now we have the maximum tree height value for each field plot where
+we measured trees. Next we can join the
+measured tree height data that we summarized above with the maximum tree
 height data that we extracted from our lidar canopy height model raster.
 
 ## Is there a good way to enforce line widths -- it may be nice if we can work in py scripts and go back and forth to notebooks...
@@ -2476,9 +2473,9 @@ it would be good to be abel to rename columns so the lidar columns say lidar vs 
 ```python
 # join data
 # note the code below doesn't work because the attributes didn't transfer when i created the buffer object
-SJER_final_height = pd.merge(insitu_stem_height, 
-                       SJER_lidar_height_df, 
-                       left_on='plotid', 
+SJER_final_height = pd.merge(insitu_stem_height,
+                       SJER_lidar_height_df,
+                       left_on='plotid',
                        right_on='Plot_ID')
 SJER_final_height
 
@@ -2819,7 +2816,7 @@ site location on the map below.
 
 
 ```python
-# this chunk of code should write an automatic google map using the study site location 
+# this chunk of code should write an automatic google map using the study site location
 # Pull the california lat / long pair, then fetch a box around it
 cali = geocoder.google('california')
 zoom = 6
@@ -2995,17 +2992,17 @@ SJER_final_height.columns
 fig, ax = plt.subplots(figsize=(10, 10))
 
 csfont = {'fontname':'Myriad Pro'}
-SJER_final_height.plot('max', 'stemheight', 
+SJER_final_height.plot('max', 'stemheight',
                        kind='scatter',
-                       title="Lidar vs measured tree height - SJER", 
+                       title="Lidar vs measured tree height - SJER",
                        fontsize=14, ax=ax)
 
-ax.set(xlabel="Lidar derived max tree height", 
+ax.set(xlabel="Lidar derived max tree height",
        ylabel="Measured tree height (m)")
 # Customize title, set position, allow space on top of plot for title
 # this doesn't work - i'm not sure why
-ax.set_title(ax.get_title(), 
-             fontsize=30, 
+ax.set_title(ax.get_title(),
+             fontsize=30,
              **csfont)
 # ax.set_xlabel(xlabel, fontsize=20, ha='left')
 
@@ -3100,7 +3097,7 @@ SJER_final_height["lidar_measured"].plot(kind="bar")
 
 
 ```python
-# python has a plotly api too! 
+# python has a plotly api too!
 
 #```{r ggplotly, echo=F, eval=F}
 

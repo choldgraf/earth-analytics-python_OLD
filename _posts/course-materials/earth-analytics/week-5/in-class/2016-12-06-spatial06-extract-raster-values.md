@@ -80,7 +80,7 @@ then fix data...
 with rio.open('data/week5/california/SJER/2013/lidar/SJER_lidarCHM.tif') as lidar_chm_src:
     # read the data into a numpy array
     # note that the (1) ensures you get a 2 dimensional object rather than 3
-    SJER_chm_data = lidar_chm_src.read(1, masked=True) 
+    SJER_chm_data = lidar_chm_src.read(1, masked=True)
 
 # read in data -- not sure if masked = True works
 # can we create summary stats on the array?
@@ -88,7 +88,7 @@ with rio.open('data/week5/california/SJER/2013/lidar/SJER_lidarCHM.tif') as lida
 #SJER_chm_data = SJER_chm.read(masked=True)
 
 # plot histogram
-# Need to add x and y labels to plot and title 
+# Need to add x and y labels to plot and title
 fig, ax = plt.subplots()
 ax.hist(SJER_chm_data.compressed())
 plt.title('Distribution of lidar canopy height values ')
@@ -124,14 +124,14 @@ Looking at the distribution of data, it appears as if there is a skew around 0. 
 
 ## Clean CHM data
 
-Notice that when we import the raster below, we use a context manager `with`. This creates a 
-connection to our geotiff dataset. When the with segment of code ends, the connection to 
-the dataset is then closed for us. 
+Notice that when we import the raster below, we use a context manager `with`. This creates a
+connection to our geotiff dataset. When the with segment of code ends, the connection to
+the dataset is then closed for us.
 
 The code below performs the following tasks:
 
-1. we create a connection to the `SJER_lidarCHM.tif` geotiff file. 
-2. We then read in the actual data as a numpy array. This allows us to manipulate the data. Notice that the code below uses `read(1)` - this tells python to only import the FIRST BAND of our raster. In this case we only have one band but we need to specify that we are only importing that one band. 
+1. we create a connection to the `SJER_lidarCHM.tif` geotiff file.
+2. We then read in the actual data as a numpy array. This allows us to manipulate the data. Notice that the code below uses `read(1)` - this tells python to only import the FIRST BAND of our raster. In this case we only have one band but we need to specify that we are only importing that one band.
 
 `SJER_chm_data = lidar_chm_src.read(1)`
 
@@ -144,11 +144,11 @@ The code below performs the following tasks:
 
 ```python
 # load lidar canopy height model raster  using rasterio
-# note that we are using a context manager - with to do this 
+# note that we are using a context manager - with to do this
 with rio.open('data/week5/california/SJER/2013/lidar/SJER_lidarCHM.tif') as lidar_chm_src:
     # read the data into a numpy array
     # note that the (1) ensures you get a 2 dimensional object rather than 3
-    SJER_chm_data = lidar_chm_src.read(1) 
+    SJER_chm_data = lidar_chm_src.read(1)
     # set CHM values of 0 to NAN
     SJER_chm_data[SJER_chm_data==0] = np.nan
     profile = lidar_chm_src.profile
@@ -159,9 +159,9 @@ with rio.open('data/week5/california/SJER/2013/lidar/SJER_lidarCHM.tif') as lida
 
 ## Spatial attributes stored in a dictionary
 
-Before we go any further, let's have a look at the `profile` object. This object is a dictionary that contains all of the spatial attributes of our original geotiff. 
+Before we go any further, let's have a look at the `profile` object. This object is a dictionary that contains all of the spatial attributes of our original geotiff.
 
-When we read the data into a numpy array, it becomes a generic object with no spatial attributes. A numpy array only contains the pixel values for each cell stored in an `array` or matrix format. 
+When we read the data into a numpy array, it becomes a generic object with no spatial attributes. A numpy array only contains the pixel values for each cell stored in an `array` or matrix format.
 
 
 ```python
@@ -175,7 +175,7 @@ type(profile)
 
 
 
-If we look at the profile object we will see all of the attributes. We are going to use that object to 
+If we look at the profile object we will see all of the attributes. We are going to use that object to
 set all of the spatial attributes when we write out our modified numpy array to a new geotiff.
 
 
@@ -217,11 +217,11 @@ again.
 
 ```python
 # load lidar canopy height model raster  using rasterio
-# note that we are using a context manager - with to do this 
+# note that we are using a context manager - with to do this
 with rio.open('data/week5/california/SJER/2013/lidar/SJER_lidarCHM.tif') as lidar_chm_src:
     # read the data into a numpy array
     # note that the (1) ensures you get a 2 dimensional object rather than 3
-    SJER_chm_data = lidar_chm_src.read(1) 
+    SJER_chm_data = lidar_chm_src.read(1)
     # set CHM values of 0 to NAN
     # currently this seems to be assigning all values to nan
     # instead i set it tot he no data value which is -9999.0
@@ -232,18 +232,18 @@ with rio.open('data/week5/california/SJER/2013/lidar/SJER_lidarCHM.tif') as lida
 
 
 ```python
-# what is .ravel -- a flattened array? i don't think we want that 
+# what is .ravel -- a flattened array? i don't think we want that
 #SJER_chm_data_ravel = SJER_chm_data.ravel()
 #SJER_chm_data_ravel = SJER_chm_data_ravel[SJER_chm_data_ravel > 0]
 
-# create histogram 
+# create histogram
 #fig, ax = plt.subplots()
 #ax.hist(SJER_chm_data_ravel)
 
 print('MEAN:',SJER_chm_data.mean())
 print('MIN:',SJER_chm_data.min())
 print('MAX:',SJER_chm_data.max())
-# create histogram 
+# create histogram
 #fig, ax = plt.subplots()
 #ax.hist(SJER_chm_data)
 ```
@@ -256,7 +256,7 @@ print('MAX:',SJER_chm_data.max())
 
 ```python
 # ok so this is a masked array -- need to better understand ravel
-# then need to understand how you'd export this to a geotiff if need be. 
+# then need to understand how you'd export this to a geotiff if need be.
 type(SJER_chm_data)
 ```
 
@@ -273,10 +273,10 @@ Finally, export the cleaned data to a geotiff. Notice that we have a nodatavalue
 ```python
 # assign cleaned lidar path
 lidar_path = 'sjer_chm_zero_removed.tif'
-# write a new geotiff using the spatial attributes of the original data 
+# write a new geotiff using the spatial attributes of the original data
 with rio.open(lidar_path, 'w', **profile) as dst:
-     # astype ensures the output format is correct 
-    dst.write(SJER_chm_data.astype(rio.float32), 1) 
+     # astype ensures the output format is correct
+    dst.write(SJER_chm_data.astype(rio.float32), 1)
 
 ```
 
@@ -284,15 +284,15 @@ with rio.open(lidar_path, 'w', **profile) as dst:
       transform = guard_transform(transform)
 
 
-Finally let's have a look at a historgram of the cleaned, exported CHM data. Note that when we import the 
-data, we set masked=True to make sure that python maskes out our NA or no data values. 
+Finally let's have a look at a historgram of the cleaned, exported CHM data. Note that when we import the
+data, we set masked=True to make sure that python maskes out our NA or no data values.
 
 
 ```python
 # open the masked CHM geotiff
 with rio.open(lidar_path) as lidar_chm2_src:
     SJER_chm2_data = lidar_chm2_src.read(1, masked=True)
-   
+
 # view mean, min max
 print('MEAN:',SJER_chm2_data.mean())
 print('MIN:',SJER_chm2_data.min())
@@ -308,13 +308,13 @@ print('MAX:',SJER_chm2_data.max())
 ##  View distribution of pixel values
 
 Finally we can plot a historgram which represents the distribution of pixels values in our raster.
-By using the `.compressed()` attribute, we force python to ignore no data values (-9999 values in this case). 
+By using the `.compressed()` attribute, we force python to ignore no data values (-9999 values in this case).
 
 # can we add outlines to each bar?
 
 
 ```python
-# create histogram 
+# create histogram
 fig, ax = plt.subplots()
 # .compressed() forces numpy to not plot the NA values
 ax.hist(SJER_chm2_data.compressed())
@@ -362,7 +362,7 @@ type(SJER_plots)
 
 
 ```python
-# view spatial extent of shapefile 
+# view spatial extent of shapefile
 SJER_plots.total_bounds
 ```
 
@@ -393,7 +393,7 @@ SJER_plots.geom_type.head()
 
 
 
-In this case our plot size is 40m. If we create a circular buffer wiht a 20m diameter it will closely approximate where trees were measured on the ground. 
+In this case our plot size is 40m. If we create a circular buffer wiht a 20m diameter it will closely approximate where trees were measured on the ground.
 
 We can use the .buffer() function to create the buffer. Here the buffer size is specified in the () of the function. We will send the new object to a new shapefile using .to_file() as follows:
 
@@ -413,17 +413,17 @@ SJER_plots.to_file(plot_buffer_path)
 
 
 ```python
-# Why do you need to specify the extent here? 
+# Why do you need to specify the extent here?
 # why is the point all black - ie the color isn't takig and it seems to be dominated by the fill?
 fig, ax = plt.subplots(figsize=(10, 10))
-ax.imshow(SJER_chm.read(masked=True)[0], 
-          extent=[bounds.left, bounds.right, bounds.bottom, bounds.top], 
+ax.imshow(SJER_chm.read(masked=True)[0],
+          extent=[bounds.left, bounds.right, bounds.bottom, bounds.top],
           cmap='Greys')
 SJER_plots.plot(ax=ax, # overlay points on the ax plot
-                marker='o', 
+                marker='o',
                 markersize=5, # set point symbol size
                 color='purple') # set point color
-ax.set_title("San Joachin - Tree Plot Locations", 
+ax.set_title("San Joachin - Tree Plot Locations",
              fontsize=25)
 ```
 
@@ -443,9 +443,9 @@ ax.set_title("San Joachin - Tree Plot Locations",
 
 ```
 
-## Extract pixel values for each plot 
+## Extract pixel values for each plot
 
-Once we have the boundary for each plot location (a 20m diameter circle) we can extract all of the pixels that fall within each circle using the function `zonal_stats` in the `rasterstats` library. 
+Once we have the boundary for each plot location (a 20m diameter circle) we can extract all of the pixels that fall within each circle using the function `zonal_stats` in the `rasterstats` library.
 
 
 
@@ -474,8 +474,8 @@ use the `extract()` function.
 ```python
 # import new geotiff with 0's removed
 # Extract zonal stats
-sjer_tree_heights = rs.zonal_stats(plot_buffer_path, 
-            lidar_path, 
+sjer_tree_heights = rs.zonal_stats(plot_buffer_path,
+            lidar_path,
             geojson_out=True,
             copy_properties=True,
             stats="count min mean max median")
@@ -576,7 +576,7 @@ sjer_tree_heights[1]
 
 
 ```python
-# turn extracted data into a pandas geo data frame 
+# turn extracted data into a pandas geo data frame
 SJER_lidar_height_df = gpd.GeoDataFrame.from_features(sjer_tree_heights)
 SJER_lidar_height_df.head()
 ```
@@ -692,7 +692,7 @@ through several plots and create histograms using a `for loop`.
 
 ```python
 
-# this should show how to create a histogram of tree heights for each plot 
+# this should show how to create a histogram of tree heights for each plot
 # we can skip this if it's not possible with  zonal stats...
 
 
@@ -875,10 +875,10 @@ SJER_insitu.head()
 
 
 
-We want to calculate a summary value of max tree height (the tallest tree measured) in each plot. 
+We want to calculate a summary value of max tree height (the tallest tree measured) in each plot.
 We have a unique id for each plot - **plotid** that we can use to group the data. The tree height values themselves are located in the **stemheight** column.
 
-We can calculate this by using the .groupy() method in pandas. Note that the statement below 
+We can calculate this by using the .groupy() method in pandas. Note that the statement below
 
 ## what is reset_index??
 
@@ -896,7 +896,7 @@ tree height extracted from the lidar CHM.
 ```python
 ## extract max tree height for each plot
 insitu_stem_height = SJER_insitu.groupby('plotid').max()['stemheight'].reset_index()
-# view the top 
+# view the top
 insitu_stem_height
 ```
 
@@ -1027,9 +1027,9 @@ in both data.frames so we'll need to tell R what it's called in each data.frame.
 ```python
 # join data
 # note the code below doesn't work because the attributes didn't transfer when i created the buffer object
-SJER_final_height = pd.merge(insitu_stem_height, 
-                       SJER_lidar_height_df, 
-                       left_on='plotid', 
+SJER_final_height = pd.merge(insitu_stem_height,
+                       SJER_lidar_height_df,
+                       left_on='plotid',
                        right_on='Plot_ID')
 SJER_final_height
 ```
@@ -1410,17 +1410,17 @@ max canopy height values and lidar derived max canopy height values.
 fig, ax = plt.subplots(figsize=(10, 10))
 
 csfont = {'fontname':'Myriad Pro'}
-SJER_final_height.plot('max', 'stemheight', 
+SJER_final_height.plot('max', 'stemheight',
                        kind='scatter',
-                       title="Lidar vs measured tree height - SJER", 
+                       title="Lidar vs measured tree height - SJER",
                        fontsize=14, ax=ax)
 
-ax.set(xlabel="Lidar derived max tree height", 
+ax.set(xlabel="Lidar derived max tree height",
        ylabel="Measured tree height (m)")
 # Customize title, set position, allow space on top of plot for title
 # this doesn't work - i'm not sure why
-ax.set_title(ax.get_title(), 
-             fontsize=30, 
+ax.set_title(ax.get_title(),
+             fontsize=30,
              **csfont)
 # ax.set_xlabel(xlabel, fontsize=20, ha='left')
 
@@ -1454,17 +1454,17 @@ Next, let's fix the plot adding a 1:1 line and making the x and y axis the same 
 fig, ax = plt.subplots(figsize=(10, 10))
 
 csfont = {'fontname':'Myriad Pro'}
-SJER_final_height.plot('max', 'stemheight', 
+SJER_final_height.plot('max', 'stemheight',
                        kind='scatter',
-                       title="Lidar vs measured tree height - SJER", 
+                       title="Lidar vs measured tree height - SJER",
                        fontsize=14, ax=ax)
 
-ax.set(xlabel="Lidar derived max tree height", 
+ax.set(xlabel="Lidar derived max tree height",
        ylabel="Measured tree height (m)")
 # Customize title, set position, allow space on top of plot for title
 # this doesn't work - i'm not sure why
-ax.set_title(ax.get_title(), 
-             fontsize=30, 
+ax.set_title(ax.get_title(),
+             fontsize=30,
              **csfont)
 # ax.set_xlabel(xlabel, fontsize=20, ha='left')
 
@@ -1498,17 +1498,17 @@ customize your plot.
 fig, ax = plt.subplots(figsize=(10, 10))
 
 csfont = {'fontname':'Myriad Pro'}
-SJER_final_height.plot('max', 'stemheight', 
+SJER_final_height.plot('max', 'stemheight',
                        kind='scatter',
-                       title="Lidar vs measured tree height - SJER", 
+                       title="Lidar vs measured tree height - SJER",
                        fontsize=14, ax=ax)
 
-ax.set(xlabel="Lidar derived max tree height", 
+ax.set(xlabel="Lidar derived max tree height",
        ylabel="Measured tree height (m)")
 # Customize title, set position, allow space on top of plot for title
 # this doesn't work - i'm not sure why
-ax.set_title(ax.get_title(), 
-             fontsize=30, 
+ax.set_title(ax.get_title(),
+             fontsize=30,
              **csfont)
 # ax.set_xlabel(xlabel, fontsize=20, ha='left')
 
@@ -1528,7 +1528,7 @@ ax.set_title(ax.get_title(),
 
 ## View Difference: lidar vs measured
 
-# this doesn't look right... 
+# this doesn't look right...
 
 
 
@@ -1549,4 +1549,3 @@ SJER_final_height["lidar_measured"].plot(kind="bar")
 
 
 ![png](../../../../../images/course-materials/earth-analytics//week-5/in-class/2016-12-06-spatial06-extract-raster-values_55_1.png)
-
