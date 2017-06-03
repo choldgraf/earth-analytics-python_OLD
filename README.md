@@ -1,38 +1,71 @@
 # earth-analytics-python
-Space where we convert earth analytics class in R to  python
+This is a collection of course material for the python version of
+Earth Analytics.
 
 # Installation
+The following sections describe how to get the earth-analytics-python
+course building on your computer.
 
-We recommend installing geo-related dependencies with `conda-forge`. Use the following command on a **fresh** python installation:
+## Set up your environment
 
-`conda install -c conda-forge geopandas rasterio pysal`
-# note that We may recommend not using conda forge -- needs more testing
- 
-## 1. Clone the repo
+We recommend installing geo-related dependencies with `conda-forge`. Follow
+these steps to get your environment ready.
+
+1. First, create a **fresh** python installation. If you're using the anaconda
+   distribution (recommended) then first create a new anaconda environment:
+
+    `conda create --name earth-analytics`
+
+2. Activate your newly-created environment with:
+
+    `source activate earth-analytics`
+
+3. Next install the packages we'll need for the class. To do this we need to
+   use the `conda-forge` channel within the anaconda install manager. This is
+   because many of the earth-related packages require non-python libraries
+   that are a pain to install by themselves. This should take care
+   of the install for us:
+
+   `conda install -c conda-forge geopandas rasterio pysal fiona contextily numpy matplotlib jupyter geopy osmnx`
+
+4. Finally, restart your terminal so that newly-installed packages will
+   get properly-linked.
+
+
+## Clone the repo
+
+Next clone this repository to your local machine. Do so by running:
+
 ```
 # clone the repository, , make the site, and serve it.
 git clone $(The repo's URL)
+
 cd $(The repo you just cloned)
 ```
 
-## 2. Install all gems
+## Install all gems
+
+Next we'll install the correct version of each gem specified in
+the gem file. This lets us build the site with Jekyll.
+First `cd` into the cloned directory and run `bundle install`:
 
 ```
-# install the correct version of each gem specified in the gem file. Run this IN the cloned directory
+cd <cloned-directory>
 bundle install
 ```
 
-# 3. Run locally
-## To build the site locally with the specified gems
+## Run locally
 
-You can view the site locally using http://localhost:4000 in your browser.
-NOTE: if the config BASEURL is not correct, the site won't build locally properly.
+To build the site locally with the specified gems, run the following
+command:
 
 ```
 # run jekyll site locally
 bundle exec jekyll serve
 ```
 
+You can view the site locally using http://localhost:4000 in your browser.
+NOTE: if the config BASEURL is not correct, the site won't build locally properly.
 
 ## Build Notes:
 
@@ -41,7 +74,7 @@ bundle exec jekyll serve
 
 ## CSS
 
-Currently, we are using less. to install less
+Currently, we are using `less`. to install `less`
 
 1. install nodejs (npm) https://nodejs.org/en/
 2. install less : `sudo npm install less -g` NOTE: you need administration access to install 
