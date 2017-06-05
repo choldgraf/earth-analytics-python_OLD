@@ -1,0 +1,20 @@
+name: earth-analytics-python
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - matplotlib
+  - python=3
+  - rasterstats
+  - geopy
+  - cartopy
+  - geopandas
+  - rasterio
+  - contextily
+  - pysal
+
+  - pip:
+      - download
+      - nbgrader
+      - mne
+      - tqdm
