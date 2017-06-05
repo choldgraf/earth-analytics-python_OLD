@@ -2,7 +2,28 @@
 This is a collection of course material for the python version of
 Earth Analytics.
 
-# Installation
+# Building Jekyll Materials
+This repository is designed to do two primary conversion steps. Both of
+these are done with python scripts in the `scripts` folder.
+
+1. **Convert RMarkdown files into Jupyter Notebooks.** Run
+   `python rmarkdown_to_ntbk.py` from within the `scripts` folder
+    to generate Jupyter Notebooks that are ready to be converted to python.
+2. **Manually convert these Jupyter Notebooks into python code.**
+   The notebooks created above will still contain R code. You should then
+   go inside each notebook and replace the R code with the corresponding
+   Python code.
+3. **Convert the Python Jupyter Notebooks into Jekyll Markdown files.**
+   Do this by running `python generate_posts.py` from within the `scripts`
+   folder. This will generate Markdown files from the Jupyter Notebooks,
+   using the metadata in the first cell as the header for each markdown
+   file. It will also insert images into the `images` folder.
+
+> **NOTE:** Step 3 will only be run on notebooks that either don't have
+a corresponding Markdown post, or whose timestamp on the notebook is newer
+than the timestamp on the corresponding markdown post.
+
+# Installing the Jekyll Site
 The following sections describe how to get the earth-analytics-python
 course building on your computer.
 
