@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Working with spreadsheet (tabular) data in R"
-excerpt: "."
+excerpt: "About."
 authors: ['Data Carpentry', 'Leah Wasser']
 category: [course-materials]
 class-lesson: ['get-to-know-python']
@@ -493,7 +493,7 @@ boulder_precip.plot('DATE', 'PRECIP')
 
 
 
-![png](2017-01-25-R05-spreadsheet-data-python_files/2017-01-25-R05-spreadsheet-data-python_22_1.png)
+![png](/Users/lewa8222/Documents/github/earth-analytics-python/images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R05-spreadsheet-data-python_22_1.png)
 
 
 
@@ -505,7 +505,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](2017-01-25-R05-spreadsheet-data-python_files/2017-01-25-R05-spreadsheet-data-python_23_0.png)
+![png](/Users/lewa8222/Documents/github/earth-analytics-python/images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R05-spreadsheet-data-python_23_0.png)
 
 
 
@@ -548,5 +548,5 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](2017-01-25-R05-spreadsheet-data-python_files/2017-01-25-R05-spreadsheet-data-python_26_0.png)
+![png](/Users/lewa8222/Documents/github/earth-analytics-python/images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R05-spreadsheet-data-python_26_0.png)
 
