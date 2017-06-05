@@ -72,9 +72,10 @@ for ifile in tqdm(files):
 
     # --- Convert ---
     # Set paths
-    build_path = os.path.join(path_root, "_posts/course-materials/earth-analytics-python/{}".format(path_rel_to_root))
+    build_path = os.path.join(path_root, "_posts/course-materials/earth-analytics-python{}".format(path_rel_to_root))
     path_imgs_root = os.path.relpath(path_root, build_path)
-    images_path = os.path.join(path_imgs_root, "images/course-materials/earth-analytics-python/{}".format(path_rel_to_root))
+    # rather than the relative stuff, just build out the full path to ensure it's right
+    images_path = os.path.join(path_root, "images/course-materials/earth-analytics-python{}".format(path_rel_to_root))
     path_new_file = os.path.join(build_path, file_name + '.md')
 
     # Check the file date, if md has been modified *after* notebook then don't re-build it
