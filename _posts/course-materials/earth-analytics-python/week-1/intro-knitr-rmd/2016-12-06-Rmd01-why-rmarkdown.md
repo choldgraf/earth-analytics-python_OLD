@@ -8,7 +8,7 @@ class-lesson: ['intro-rmarkdown-knitr']
 permalink: /course-materials/earth-analytics/week-1/intro-rmarkdown-knitr/
 nav-title: 'Intro to R Markdown'
 dateCreated: 2016-12-12
-modified: 2017-05-25
+modified: 2017-06-05
 module-title: 'Link data, processing and results using R Markdown and Knitr'
 module-nav-title: 'R Markdown Intro'
 module-description: 'This module teaches participants how to use R Markdown

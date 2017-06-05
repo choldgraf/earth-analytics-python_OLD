@@ -3,7 +3,7 @@ layout: single
 title: "Subset time series data in R - introduction to dplyr pipes and tidyverse coding approaches - Flooding & erosion data"
 excerpt: "This lesson walks through extracting temporal subsets of time series data using dplyr pipes. In the previous lesson we learned how to convert data containing a data field into a data class. In this lesson we use pipes to extract temporal subsets so that we can refine our time series data analysis. Finally we plot the data using ggplot."
 authors: ['Leah Wasser']
-modified: 2017-05-25
+modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['hw-ggplot2-r']
 permalink: /course-materials/earth-analytics/week-2/precip-in-r/
@@ -970,7 +970,7 @@ ax.set(xlabel="Date", ylabel="Precipitation (Inches)", title="Hourly Precipitati
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood03-precipitation-data-in-R_20_0.png)
+![png](2017-01-25-flood03-precipitation-data-in-R_files/2017-01-25-flood03-precipitation-data-in-R_20_0.png)
 
 
 
@@ -1129,7 +1129,7 @@ ax.set(xlabel="Date", ylabel="Precipitation (inches)",
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood03-precipitation-data-in-R_28_0.png)
+![png](2017-01-25-flood03-precipitation-data-in-R_files/2017-01-25-flood03-precipitation-data-in-R_28_0.png)
 
 
 
@@ -1214,7 +1214,7 @@ ax.set(xlabel="Date", ylabel="Precipitation (inches)",
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood03-precipitation-data-in-R_32_1.png)
+![png](2017-01-25-flood03-precipitation-data-in-R_files/2017-01-25-flood03-precipitation-data-in-R_32_1.png)
 
 
 

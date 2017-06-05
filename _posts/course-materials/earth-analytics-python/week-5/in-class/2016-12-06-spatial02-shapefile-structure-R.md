@@ -4,7 +4,7 @@ title: "GIS in Python: Shp, shx and dbf + prj - the files that make up a shapefi
 excerpt: "This lesson reviews the core files that are required to use a shapefile including: shp, shx and dbf. It also covers the .prj format which is used to
 define the coordinate reference system (CRS) of the data. "
 authors: ['Leah Wasser']
-modified: 2017-05-25
+modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['class-intro-spatial-python']
 permalink: /course-materials/earth-analytics-python/week-5/shapefile-structure/

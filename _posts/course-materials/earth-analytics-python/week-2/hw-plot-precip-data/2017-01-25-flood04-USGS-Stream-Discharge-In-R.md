@@ -3,7 +3,7 @@ layout: single
 title: "Plot Stream Discharge Data in R"
 excerpt: "This lesson is a challenge exercise that asks you to use all of the skills used during the week 2 set of lessons in the earth analytics course. Here you will import data and subset it to create a final plot of stream discharge over time."
 authors: ['Leah Wasser', 'NEON Data Skills']
-modified: 2017-05-25
+modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['hw-ggplot2-r']
 week: 2
@@ -401,7 +401,7 @@ ax.set(title="Stream Discharge (CFS) - Boulder Creek, 1986-2016",
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood04-USGS-Stream-Discharge-In-R_14_0.png)
+![png](2017-01-25-flood04-USGS-Stream-Discharge-In-R_files/2017-01-25-flood04-USGS-Stream-Discharge-In-R_14_0.png)
 
 
 
@@ -490,7 +490,7 @@ plt.setp(ax.get_xticklabels(), rotation=30);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood04-USGS-Stream-Discharge-In-R_20_0.png)
+![png](2017-01-25-flood04-USGS-Stream-Discharge-In-R_files/2017-01-25-flood04-USGS-Stream-Discharge-In-R_20_0.png)
 
 
 

@@ -4,11 +4,11 @@ title: "Getting Help with R"
 excerpt: "This tutorial covers ways to get help when you are stuck in R. "
 authors: ['Data Carpentry', 'Leah Wasser']
 category: [course-materials]
-class-lesson: ['get-to-know-r']
+class-lesson: ['get-to-know-python']
 permalink: /course-materials/earth-analytics-python/week-2/about-and-get-help-with-R/
 nav-title: 'About R / Getting Help'
 dateCreated: 2016-12-13
-modified: 2017-05-25
+modified: 2017-06-05
 week: 2
 sidebar:
   nav:

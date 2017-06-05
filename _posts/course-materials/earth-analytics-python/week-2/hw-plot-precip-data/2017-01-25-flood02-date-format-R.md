@@ -3,7 +3,7 @@ layout: single
 title: "Work With Date - Time formats in R - Time Series Data "
 excerpt: "This lesson covers how to deal with dates in R. It reviews how to apply the as.Date() function to a column containing date or data-time data. This function converts a field containing dates in a standard format, to a date class that R can understand and plot efficiently."
 authors: ['Leah Wasser', 'Data Carpentry']
-modified: 2017-05-25
+modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['hw-ggplot2-r']
 permalink: /course-materials/earth-analytics/week-2/date-class-in-r/
@@ -123,7 +123,7 @@ boulder_precip.plot('DATE', 'PRECIP')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood02-date-format-R_4_1.png)
+![png](2017-01-25-flood02-date-format-R_files/2017-01-25-flood02-date-format-R_4_1.png)
 
 
 
@@ -186,7 +186,7 @@ ax.set(xlabel="Date",
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood02-date-format-R_7_0.png)
+![png](2017-01-25-flood02-date-format-R_files/2017-01-25-flood02-date-format-R_7_0.png)
 
 
 

@@ -6,11 +6,11 @@ designed for someone who has not used Python before. We will work with precipita
 stream discharge data for Boulder County."
 authors: ['Chris Holdgraf', 'Leah Wasser', 'Data Carpentry']
 category: [course-materials]
-class-lesson: ['get-to-know-r']
+class-lesson: ['get-to-know-python']
 permalink: /course-materials/earth-analytics-python/week-2/python-syntax-and-using-functions/
 nav-title: 'Get to Know Python'
 dateCreated: 2017-05-23
-modified: 2017-05-25
+modified: 2017-06-05
 module-title: 'Get to Know the Python programming language'
 module-nav-title: 'Get to Know Python'
 module-description: 'This module introduces the Python scientific programming language.
@@ -27,6 +27,7 @@ order: 1
 topics:
   reproducible-science-and-programming: ['Jupyter-notebooks']
 ---
+
 
 {% include toc title="In This Lesson" icon="file-text" %}
 
@@ -305,7 +306,7 @@ data.plot(x='DATE',
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/get-to-know-python/2017-01-25-R01-python-syntax-and-using-basic-functions_18_1.png)
+![png](2017-01-25-R01-python-syntax-and-using-basic-functions_files/2017-01-25-R01-python-syntax-and-using-basic-functions_18_1.png)
 
 
 Notice that the plot above doesn't look exactly the way we may want it to look. We'll learn how to further customize plots in a later lesson. 
@@ -745,7 +746,7 @@ data.plot()
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/get-to-know-python/2017-01-25-R01-python-syntax-and-using-basic-functions_41_1.png)
+![png](2017-01-25-R01-python-syntax-and-using-basic-functions_files/2017-01-25-R01-python-syntax-and-using-basic-functions_41_1.png)
 
 
 
@@ -763,7 +764,7 @@ data.plot(x='DATE',
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/get-to-know-python/2017-01-25-R01-python-syntax-and-using-basic-functions_42_1.png)
+![png](2017-01-25-R01-python-syntax-and-using-basic-functions_files/2017-01-25-R01-python-syntax-and-using-basic-functions_42_1.png)
 
 
 ### Base functions vs. packages

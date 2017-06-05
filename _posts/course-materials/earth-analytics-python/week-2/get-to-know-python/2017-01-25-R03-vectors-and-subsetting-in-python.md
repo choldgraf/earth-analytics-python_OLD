@@ -1,15 +1,15 @@
 ---
 layout: single
-title: "Working with vectors and data types in R"
-excerpt: "This tutorial introduces vectors in R. It also introduces subsetting,
-and working with NA values."
-authors: ['Data Carpentry', 'Leah Wasser']
+title: "About arrays in python and data types including strings, numbers and logicals - Data Science for scientists 101"
+excerpt: "This tutorial introduces numpy arrays in Python. It also introduces the differences between strings, numbers and logical or boolean values (True / False) in Python."
+authors: ['Chris Holdgraf', 'Data Carpentry', 'Leah Wasser']
 category: [course-materials]
-class-lesson: ['get-to-know-r']
-permalink: /course-materials/earth-analytics-python/week-2/work-with-data-types-r/
-nav-title: 'Vectors in R'
+class-lesson: ['get-to-know-python']
+course: "earth-analytics-python"
+permalink: /course-materials/earth-analytics-python/week-2/work-with-data-types-python/
+nav-title: 'Numpy arrays'
 dateCreated: 2017-05-23
-modified: 2017-05-25
+modified: 2017-06-05
 week: 2
 sidebar:
   nav:
@@ -18,71 +18,43 @@ comments: true
 order: 3
 ---
 
+
 {% include toc title="In This Lesson" icon="file-text" %}
-
-
-
 
 
 <div class='notice--success' markdown="1">
 
-
-
 ## <i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives
-
 At the end of this activity, you will be able to:
 
-
-
-* Understand the structure of and be able to create a vector object in R.
-
-
+* Understand the structure of and be able to create a vector object in Python.
 
 ## <i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What you need
 
-
-
-You need R and RStudio to complete this tutorial. Also we recommend have you
-
+You need the anaconda distribution of Python 3.x and Jupyter Notebooks to complete this tutorial. Also we recommend have you
 have an `earth-analytics` directory setup on your computer with a `/data`
-
 directory with it.
 
-
-
-* [How to Setup R / R Studio](/course-materials/earth-analytics-python/week-1/setup-r-rstudio/)
-
-* [Setup your working directory](/course-materials/earth-analytics-python/week-1/setup-working-directory/)
-
-
-
+# need to fix these links to be python...
+* [How to Setup R / R Studio](/course-materials/earth-analytics/week-1/setup-r-rstudio/)
+* [Setup your working directory](/course-materials/earth-analytics/week-1/setup-working-directory/)
 
 
 </div>
 
-
-
-
-
-## Vectors and data types
-
-
-
-A vector is the most common data structure in `R`. A vector is defined as a
-
-group of values, which most often are either numbers or characters. You can
-
-assign this list of values to an object or variable, just like you
-
-can for a single value. For example we can create a vector of animal weights:
-
-
-
+To begin working with arrays in `python` we will first load the `numpy` library. 
 
 
 ```python
 import numpy as np
 ```
+
+## Numpy arrays and data types
+
+An array is a common data structure used in `python`. An array is defined as a
+group of values, which most often are either numbers or characters. You can
+assign this list of values to an object or variable, just like you
+can for a single value. For example we can create a vector of animal weights:
 
 
 ```python
@@ -97,26 +69,7 @@ weight_g
 
 
 
-
-```python
-# ```{r weight-vector }
-
-# weight_g <- c(50, 60, 65, 82)
-
-# weight_g
-
-
-
-# ```
-
-```
-
-
-
-A vector can also contain characters:
-
-
-
+An array can also contain characters:
 
 
 ```python
@@ -132,26 +85,8 @@ animals
 
 
 
-
-```python
-# ```{r, purl=FALSE}
-
-# animals <- c("mouse", "rat", "dog")
-
-# animals
-
-# ```
-
-```
-
-
-
-There are many functions that allow you to inspect the content of a
-
-vector. `length()` tells you how many elements are in a particular vector:
-
-
-
+There are many functions that allow you to inspect the content and structure of an
+array. For instance, `len()` (short for **len**gth) tells you how many elements are in a particular vector:
 
 
 ```python
@@ -177,42 +112,10 @@ len(animals)
 
 
 
+## Array data types
 
-```python
-# ```{r, purl=FALSE}
-
-# length(weight_g)
-
-# length(animals)
-
-# ```
-
-```
-
-
-
-## Vector data types
-
-
-
-An important feature of a vector, is that all of the elements are the same data
-
-type. The function `class()` shows us the class (the data type) of an object:
-
-
-
-
-
-```python
-type(weight_g)
-```
-
-
-
-
-    numpy.ndarray
-
-
+An important feature of an array, is that all of the elements are the same data
+type. The attribute `.dtype` shows us the the data type stored within an array:
 
 
 ```python
@@ -238,59 +141,23 @@ animals.dtype
 
 
 
-
-```python
-# ```{r, purl=FALSE}
-
-# class(weight_g)
-
-# class(animals)
-
-# ```
-
-```
-
-
-
-The function `str()` shows us the **structure** of the object and the elements it
-
-contains. `str()` is a really useful function when working with large and complex
-
-objects:
-
-
-
+The function `type()` shows us the **structure** of the object. 
 
 
 ```python
-# Not sure what the equivalent of this is in numpy
+# View the python object type
+type(weight_g)
 ```
 
 
 
 
-    '[50 60 65 82]'
+    numpy.ndarray
 
 
 
-
-```python
-# ```{r, purl=FALSE}
-
-# str(weight_g)
-
-# str(animals)
-
-# ```
-
-```
-
-
-
-You can add elements to your vector by using the `c()` function:
-
-
-
+You can add elements to an array using the `.hstack()` function. 
+Below, we add the value 90 to the end of the `weight_g` object.
 
 
 ```python
@@ -316,204 +183,77 @@ weight_g
 
 
 
-
-```python
-# ```{r, purl=FALSE}
-
-
-
-# # add the number 90 to the end of the vector
-
-# weight_g <- c(weight_g, 90)
-
-
-
-# # add the number 30 to the beginning of the vector
-
-# weight_g <- c(30, weight_g)
-
-# weight_g
-
-# ```
-
-```
-
-
-
-In the examples above, we saw 2 of the 6 **atomic vector** types that `R` uses:
-
-
+In the examples above, we saw 2 of the 6 **data** types that `Python` uses:
 
 1. `"character"` and
-
 2. `"numeric"`.
 
-
-
 These are the basic data tpes that all `R` objects are built
-
 from. The other 4 are:
 
-
-
 * `"logical"` for `TRUE` and `FALSE` (the boolean data type)
-
 * `"integer"` for integer numbers (e.g., `2L`, the `L` indicates to R that it's an integer)
-
 * `"complex"` to represent complex numbers with real and imaginary parts (e.g.,
-
   `1+4i`) and that's all we're going to say about them
-
 * `"raw"` that we won't discuss further
-
 
 
 ## Data type vs. data structure
 
 Vectors are one of the many **data structures** that `R` uses. Other important
-
 ones include: lists (`list`), matrices (`matrix`), data frames (`data.frame`) and
-
 factors (`factor`). We will look at `data.frames` when we open our `boulder_precip`
-
 data in the next lesson!
-
 
 
 <div class="notice--warning" markdown="1">
 
-
-
 ## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Optional challenge activity
 
-
-
 * **Question**: What happens when we create a vector that contains both numbers
-
 and character values? Give it a try and write down the answer.
 
 <!-- * _Answer_: R implicitly converts them to all be the same type -->
 
 
-
 * **Question**: What will happen in each of these examples? (hint: use `class()`
-
   to check the data type of your objects):
 
 
-
-```r
-
+```python
 num_char <- c(1, 2, 3, 'a')
-
 num_logical <- c(1, 2, 3, '2.45')
-
 char_logical <- c('a', 'b', 'c', frog)
-
 tricky <- c(1, 2, 3, '4')
-
 ```
 
 * **Question**: Why do you think it happens?
 
-<!-- * _Answer_: Vectors can be of only one data type. R tries to convert (=coerce)
-
+<!-- * _Answer_: Vectors can be of only one data type. Python tries to convert (=coerce)
   the content of this vector to find a "common denominator". -->
 
-
-
 * **Question**: Can you draw a diagram that represents the hierarchy of the data
-
   types?
 
 <!-- * _Answer_: `logical -> numeric -> character <-- logical` -->
 
-
-
 </div>
-
-
-
-
-
-
-
 
 
 ```python
 num_char = np.array([1, 2, 3, 'a'])
 
-
-
 num_logical = np.array([1, 2, 3, True])
 
-
-
 char_logical = np.array(['a', 'b', 'c', True])
-
-
 
 tricky = np.array([1, 2, 3, '4'])
 ```
 
-
-```python
-# ```{r, echo=FALSE, eval=FALSE, purl=TRUE}
-
-# ## We’ve seen that atomic vectors can be of type character, numeric, integer, and
-
-# ## logical. But what happens if we try to mix these types in a single
-
-# ## vector?
-
-
-
-# ## What will happen in each of these examples? (hint: use `class()` to
-
-# ## check the data type of your object)
-
-# num_char <- c(1, 2, 3, 'a')
-
-
-
-# num_logical <- c(1, 2, 3, TRUE)
-
-
-
-# char_logical <- c('a', 'b', 'c', TRUE)
-
-
-
-# tricky <- c(1, 2, 3, '4')
-
-
-
-# ## Why do you think it happens?
-
-
-
-# ## Can you draw a diagram that represents the hierarchy of the data
-
-# ## types?
-
-# ```
-
-```
-
-
-
-
-
-## Subsetting vectors
-
-
+## Subset arrays
 
 If we want to extract one or several values from a vector, we must provide one
-
 or several indices in square brackets. For instance:
-
-
-
 
 
 ```python
@@ -542,48 +282,18 @@ animals[[2, 3]]
 
 
 
-
-```python
-# ```{r, results='show', purl=FALSE}
-
-# animals <- c("mouse", "rat", "dog", "cat")
-
-# animals[2]
-
-# animals[c(3, 2)]
-
-# ```
-
-```
-
-
-
 <i fa fa-star></i>**Data Tip:** R indexes start at 1. Programming languages like
-
-Fortran, MATLAB, and R start
-
-counting at 1, because that's what human beings typically do. Languages in the C
-
-family (including C++, Java, Perl, and Python) count from 0 because that's
-
+Fortran, MATLAB, and R start counting at 1, because that's what human beings typically do. Languages in the C
+family (including C++, Java, Perl, and Python) count from 0 because that's 
 simpler for computers to do.
-
 {: .notice }
 
-### ChrisH Note: this is a big oversimplification of 0 vs. 1 based indexing. :-)
+# ChrisH Note: this is a big oversimplification of 0 vs. 1 based indexing. :-)
 
+## Subset arrays
 
-
-## Subset Vectors
-
-
-
-We can subset vectors too. For instance, if you wanted to select only the
-
-values above 50:
-
-
-
+We can subset arrays too. For instance, if you want to select only the
+values that are greater than 50:
 
 
 ```python
@@ -597,56 +307,43 @@ weight_g > 50
 
 
 
+Notice that the command above returns a BOOLEAN (TRUE / FALSE) array. We can then use 
+that array to select all objects in our weight_g array that are greater than 50 as follows:
+
+
 
 ```python
-# so we can use this to select only the values above 50
+# select only the values greater than 50
 weight_g[weight_g > 50]
 ```
 
 
 
 
-    array([60, 65, 82, 90])
-
-
-
-
-```python
-# ```{r, results='show', purl=FALSE}
-
-# weight_g > 50    # will return logicals with TRUE for the indices that meet the condition
-
-# ## so we can use this to select only the values above 50
-
-# weight_g[weight_g > 50]
-
-# ```
-
-```
+    array([60, 65, 82])
 
 
 
 You can combine multiple tests using `&` (both conditions are true, AND) or `|`
-
 (at least one of the conditions is true, OR):
 
 
 
-
-
 ```python
+# select objects that are EITHER less than 30 OR greater than 50
 weight_g[(weight_g < 30) | (weight_g > 50)]
 ```
 
 
 
 
-    array([60, 65, 82, 90])
+    array([60, 65, 82])
 
 
 
 
 ```python
+# select objects that are greater than or equal to 30 OR equal to 21
 weight_g[(weight_g >= 30) & (weight_g == 21)]
 ```
 
@@ -658,27 +355,12 @@ weight_g[(weight_g >= 30) & (weight_g == 21)]
 
 
 
-```python
-# ```{r, results='show', purl=FALSE}
-
-# weight_g[weight_g < 30 | weight_g > 50]
-
-# weight_g[weight_g >= 30 & weight_g == 21]
-
-# ```
-
-```
 
 
+Notice that we use two `==` signs to designate `equal to` so as not to confuse equals to with the assignment operator which is also `=` in Python.
 
 When working with vectors of characters, if you are trying to combine many
-
-conditions it can become tedious to type. The function `%in%` allows you to test
-
-if a value is found in a vector:
-
-
-
+conditions it can become tedious to type. 
 
 
 ```python
@@ -694,8 +376,13 @@ animals[(animals == 'cat') | (animals == 'rat')]
 
 
 
+The function `intersection()` allows you to test
+if a value is found in an array of values:
+
+
 
 ```python
+# select objects in the animals array that are within the array [`rat`, `cat`, `dog`, `duck`]
 set(animals).intersection(set(['rat', 'cat', 'dog', 'duck']))
 ```
 
@@ -705,6 +392,8 @@ set(animals).intersection(set(['rat', 'cat', 'dog', 'duck']))
     {'cat', 'dog', 'rat'}
 
 
+
+# chris is the example below just another way of doing what you did above?
 
 
 ```python
@@ -721,64 +410,14 @@ animals[animal_bool]
 
 
 
-```python
-# ```{r, results='show', purl=FALSE}
-
-# animals <- c("mouse", "rat", "dog", "cat")
-
-# animals[animals == "cat" | animals == "rat"] # returns both rat and cat
-
-# animals %in% c("rat", "cat", "dog", "duck")
-
-# animals[animals %in% c("rat", "cat", "dog", "duck")]
-
-# ```
-
-```
-
-
-
 <div class="notice--warning" markdown="1">
 
-
-
 ## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Optional challenge
-
-
 
 * Can you figure out why `"four" > "five"` returns `TRUE`?
 
 </div>
 
-
-
-
-* Can you figure out why `"four" > "five"` returns `True`?
-
-
-```python
-# ```{r, echo=FALSE, purl=TRUE}
-
-# # * Can you figure out why `"four" > "five"` returns `TRUE`?
-
-# ```
-
-```
-
 ## Answers
 
-* When using ">" or "<" on strings, R compares their alphabetical order. Here "four" comes after "five", and therefore is "greater than" it.
-
-
-```python
-```{r, purl=FALSE}
-
-## Answers
-
-## * When using ">" or "<" on strings, R compares their alphabetical order. Here
-
-##   "four" comes after "five", and therefore is "greater than" it.
-
-```
-
-```
+<!-- When using ">" or "<" on strings, R compares their alphabetical order. Here "four" comes after "five", and therefore is "greater than" it. -->

@@ -4,7 +4,7 @@ title: "GIS in Python: Introduction to vector format spatial data - points, line
 excerpt: "This lesson introduces what vector data are and how to open vector data stored in
 shapefile format in Python. "
 authors: ['Chris Holdgraf', 'Leah Wasser']
-modified: 2017-05-25
+modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['class-intro-spatial-python']
 permalink: /course-materials/earth-analytics-python/week-5/intro-vector-data-python/
@@ -770,7 +770,7 @@ sjer_plot_locations.plot()
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial01-intro-vector-data-R_18_1.png)
+![png](2016-12-06-spatial01-intro-vector-data-R_files/2016-12-06-spatial01-intro-vector-data-R_18_1.png)
 
 
 We can adjust the symbol size of our plot using the `markersize` argument.
@@ -796,7 +796,7 @@ ax.set_title('SJER Plot Locations\nMadera County, CA')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial01-intro-vector-data-R_20_1.png)
+![png](2016-12-06-spatial01-intro-vector-data-R_files/2016-12-06-spatial01-intro-vector-data-R_20_1.png)
 
 
 ### Change plot colors & symbols
@@ -822,7 +822,7 @@ ax.set_title('SJER Plot Locations\nMadera County, CA')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial01-intro-vector-data-R_22_1.png)
+![png](2016-12-06-spatial01-intro-vector-data-R_files/2016-12-06-spatial01-intro-vector-data-R_22_1.png)
 
 
 
@@ -972,7 +972,7 @@ ax.set_title('SJER Plot Locations\nMadera County, CA')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial01-intro-vector-data-R_26_1.png)
+![png](2016-12-06-spatial01-intro-vector-data-R_files/2016-12-06-spatial01-intro-vector-data-R_26_1.png)
 
 
 
@@ -990,7 +990,7 @@ sjer_plot_locations.plot(ax=ax, markersize=10, color='r')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial01-intro-vector-data-R_27_1.png)
+![png](2016-12-06-spatial01-intro-vector-data-R_files/2016-12-06-spatial01-intro-vector-data-R_27_1.png)
 
 
 ## Why is plotting so slow?
@@ -1049,5 +1049,5 @@ plt.ylim([bounds.miny.min()-5, bounds.maxy.max()+5]);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial01-intro-vector-data-R_31_0.png)
+![png](2016-12-06-spatial01-intro-vector-data-R_files/2016-12-06-spatial01-intro-vector-data-R_31_0.png)
 

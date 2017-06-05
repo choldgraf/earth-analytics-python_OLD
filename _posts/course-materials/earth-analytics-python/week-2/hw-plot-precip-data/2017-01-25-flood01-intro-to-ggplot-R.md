@@ -3,7 +3,7 @@ layout: single
 title: "Customize ggplot plots in R - earth analytics - data science for scientists"
 excerpt: 'This lesson covers how to customize ggplot plot colors and label axes in R. It uses the ggplot2 package.'
 authors: ['Leah Wasser', 'Data Carpentry']
-modified: 2017-05-25
+modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['hw-ggplot2-r']
 nav-title: 'GGPLOT R'
@@ -194,7 +194,7 @@ boulder_precip.plot('DATE', 'PRECIP')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood01-intro-to-ggplot-R_7_1.png)
+![png](2017-01-25-flood01-intro-to-ggplot-R_files/2017-01-25-flood01-intro-to-ggplot-R_7_1.png)
 
 
 
@@ -292,7 +292,7 @@ fig, ax = plt.subplots()
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood01-intro-to-ggplot-R_10_0.png)
+![png](2017-01-25-flood01-intro-to-ggplot-R_files/2017-01-25-flood01-intro-to-ggplot-R_10_0.png)
 
 
 
@@ -327,7 +327,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood01-intro-to-ggplot-R_13_0.png)
+![png](2017-01-25-flood01-intro-to-ggplot-R_files/2017-01-25-flood01-intro-to-ggplot-R_13_0.png)
 
 
 
@@ -358,7 +358,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood01-intro-to-ggplot-R_16_0.png)
+![png](2017-01-25-flood01-intro-to-ggplot-R_files/2017-01-25-flood01-intro-to-ggplot-R_16_0.png)
 
 
 
@@ -422,7 +422,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood01-intro-to-ggplot-R_22_0.png)
+![png](2017-01-25-flood01-intro-to-ggplot-R_files/2017-01-25-flood01-intro-to-ggplot-R_22_0.png)
 
 
 
@@ -484,7 +484,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood01-intro-to-ggplot-R_27_0.png)
+![png](2017-01-25-flood01-intro-to-ggplot-R_files/2017-01-25-flood01-intro-to-ggplot-R_27_0.png)
 
 
 
@@ -517,7 +517,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood01-intro-to-ggplot-R_30_0.png)
+![png](2017-01-25-flood01-intro-to-ggplot-R_files/2017-01-25-flood01-intro-to-ggplot-R_30_0.png)
 
 
 
@@ -552,7 +552,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood01-intro-to-ggplot-R_33_0.png)
+![png](2017-01-25-flood01-intro-to-ggplot-R_files/2017-01-25-flood01-intro-to-ggplot-R_33_0.png)
 
 
 
@@ -586,7 +586,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood01-intro-to-ggplot-R_36_0.png)
+![png](2017-01-25-flood01-intro-to-ggplot-R_files/2017-01-25-flood01-intro-to-ggplot-R_36_0.png)
 
 
 
@@ -619,7 +619,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood01-intro-to-ggplot-R_39_0.png)
+![png](2017-01-25-flood01-intro-to-ggplot-R_files/2017-01-25-flood01-intro-to-ggplot-R_39_0.png)
 
 
 
@@ -652,7 +652,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood01-intro-to-ggplot-R_42_0.png)
+![png](2017-01-25-flood01-intro-to-ggplot-R_files/2017-01-25-flood01-intro-to-ggplot-R_42_0.png)
 
 
 
@@ -692,7 +692,7 @@ ax.set(xlabel="Date", ylabel="Precipitation (Inches)", title="Daily Precipitatio
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood01-intro-to-ggplot-R_45_0.png)
+![png](2017-01-25-flood01-intro-to-ggplot-R_files/2017-01-25-flood01-intro-to-ggplot-R_45_0.png)
 
 
 

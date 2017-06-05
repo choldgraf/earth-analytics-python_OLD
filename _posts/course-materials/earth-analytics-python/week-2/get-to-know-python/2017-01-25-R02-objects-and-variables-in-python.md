@@ -10,7 +10,7 @@ class-lesson: ['get-to-know-python']
 permalink: /course-materials/earth-analytics-python/week-2/objects-and-variables-in-python/
 nav-title: 'Objects in Python'
 dateCreated: 2017-05-23
-modified: 2017-05-25
+modified: 2017-06-05
 course: "earth-analytics-python"
 week: 2
 sidebar:
@@ -19,6 +19,7 @@ author_profile: false
 comments: true
 order: 2
 ---
+
 
 {% include toc title="In This Lesson" icon="file-text" %}
 
@@ -190,25 +191,13 @@ and then change `weight_kg` to 100.
 weight_kg = 100
 ```
 
-
-
 What do you think is the current content of the object `weight_lb`? 126.5 or 200?
-
-
 
 <div class="notice--warning" markdown="1">
 
-
-
 ## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Optional challenge activity
 
-
-
 What are the values of each object defined in EACH LINE OF code below?
-
-
-
-
 
 ```python
 mass = 47.5            # mass?
@@ -217,6 +206,8 @@ mass = mass * 2.0      # mass?
 age  = age - 20        # age?
 mass_index = mass / age  # mass_index?
 ```
+
+</div>
 
 <!-- Answers to go here... -->
 

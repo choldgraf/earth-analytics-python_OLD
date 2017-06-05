@@ -4,7 +4,7 @@ title: "Extract raster values using vector boundaries in Python"
 excerpt: "This lesson reviews how to extract data from a raster dataset using a
 vector dataset. "
 authors: ['Chris Holdgraf', 'Carson Farmer', 'Leah Wasser']
-modified: 2017-05-25
+modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['class-intro-spatial-python']
 permalink: /course-materials/earth-analytics-python/week-5/extract-data-from-raster/
@@ -104,7 +104,7 @@ plt.title('Distribution of lidar canopy height values ')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial06-extract-raster-values_4_1.png)
+![png](2016-12-06-spatial06-extract-raster-values_files/2016-12-06-spatial06-extract-raster-values_4_1.png)
 
 
 
@@ -330,7 +330,7 @@ plt.title('Distribution of lidar canopy height values ')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial06-extract-raster-values_21_1.png)
+![png](2016-12-06-spatial06-extract-raster-values_files/2016-12-06-spatial06-extract-raster-values_21_1.png)
 
 
 ## Part 2. Does our CHM data compare to field measured tree heights?
@@ -435,7 +435,7 @@ ax.set_title("San Joachin - Tree Plot Locations",
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial06-extract-raster-values_30_1.png)
+![png](2016-12-06-spatial06-extract-raster-values_files/2016-12-06-spatial06-extract-raster-values_30_1.png)
 
 
 
@@ -1383,7 +1383,7 @@ SJER_plots.plot(ax=ax, markersize=500, color='r')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial06-extract-raster-values_47_1.png)
+![png](2016-12-06-spatial06-extract-raster-values_files/2016-12-06-spatial06-extract-raster-values_47_1.png)
 
 
 
@@ -1435,7 +1435,7 @@ ax.set_title(ax.get_title(),
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial06-extract-raster-values_49_1.png)
+![png](2016-12-06-spatial06-extract-raster-values_files/2016-12-06-spatial06-extract-raster-values_49_1.png)
 
 
 
@@ -1478,7 +1478,7 @@ ax.set_title(ax.get_title(),
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial06-extract-raster-values_51_1.png)
+![png](2016-12-06-spatial06-extract-raster-values_files/2016-12-06-spatial06-extract-raster-values_51_1.png)
 
 
 We can also add a regression fit to our plot. Explore the GGPLOT options and
@@ -1522,7 +1522,7 @@ ax.set_title(ax.get_title(),
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial06-extract-raster-values_53_1.png)
+![png](2016-12-06-spatial06-extract-raster-values_files/2016-12-06-spatial06-extract-raster-values_53_1.png)
 
 
 
@@ -1548,5 +1548,5 @@ SJER_final_height["lidar_measured"].plot(kind="bar")
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial06-extract-raster-values_55_1.png)
+![png](2016-12-06-spatial06-extract-raster-values_files/2016-12-06-spatial06-extract-raster-values_55_1.png)
 
