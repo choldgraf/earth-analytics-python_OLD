@@ -7,14 +7,14 @@ modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['hw-ggplot2-r']
 week: 2
-permalink: /course-materials/earth-analytics/week-2/plot-stream-discharge-timeseries-challenge-r/
+permalink: /course-materials/earth-analytics-python/week-2/plot-stream-discharge-timeseries-challenge-r/
 nav-title: 'Plot Stream Discharge Data R'
 sidebar:
   nav:
 author_profile: false
 comments: true
 order: 4
-course: "earth-analytics"
+course: "earth-analytics-python"
 topics:
   reproducible-science-and-programming: ['RStudio']
   time-series:

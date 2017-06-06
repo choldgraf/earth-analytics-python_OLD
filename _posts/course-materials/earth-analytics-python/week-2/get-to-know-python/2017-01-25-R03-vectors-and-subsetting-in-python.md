@@ -9,7 +9,7 @@ course: "earth-analytics-python"
 permalink: /course-materials/earth-analytics-python/week-2/work-with-data-types-python/
 nav-title: 'Numpy arrays'
 dateCreated: 2017-05-23
-modified: 2017-06-05
+modified: 2017-06-06
 week: 2
 sidebar:
   nav:

@@ -6,7 +6,7 @@ authors: ['Leah Wasser', 'Data Carpentry']
 modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['hw-ggplot2-r']
-permalink: /course-materials/earth-analytics/week-2/date-class-in-r/
+permalink: /course-materials/earth-analytics-python/week-2/date-class-in-r/
 nav-title: 'Dates in R'
 week: 2
 sidebar:
@@ -14,7 +14,7 @@ sidebar:
 author_profile: false
 comments: true
 order: 2
-course: "earth-analytics"
+course: "earth-analytics-python"
 topics:
   reproducible-science-and-programming: ['RStudio']
   time-series:

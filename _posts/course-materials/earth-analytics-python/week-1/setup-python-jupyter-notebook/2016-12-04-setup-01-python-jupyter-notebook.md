@@ -17,7 +17,7 @@ module-type: 'homework'
 week: 1
 sidebar:
   nav:
-course: 'earth-analytics'
+course: 'earth-analytics-python'
 class-lesson: ['setup-python-jupyter']
 permalink: /course-materials/earth-analytics-python/week-1/setup-anaconda-python-distribution/
 author_profile: false
@@ -35,7 +35,7 @@ order: 1
 
 ##  Python / Jupyter notebook setup
 
-In this tutorial, we will download and install the anaconda distribution of `Python` which
+In this tutorial, we will download and install the anaconda distribution of `Python` which 
 comes with `Jupyter notebooks` on your computer.
 
 
@@ -64,7 +64,7 @@ At the end of this activity, you will:
     <a href="https://www.continuum.io/anaconda">Anaconda</a>,
 an all-in-one installer.
 
-### Python 3.x
+### Python 3.x 
 
 Regardless of how you choose to install it,
       <strong>please make sure you install Python version 3.x</strong>
@@ -135,3 +135,4 @@ and below, are not).
 
 Once `Python 3.x` and `Jupyter notebooks` are installed, launch the Anaconda navigator to make sure that it works
 and there are no errors when you open it.
+

@@ -3,14 +3,14 @@ layout: single
 title: "Get to Know Python & Jupyter Notebooks"
 excerpt: "This tutorial introduces the Python scientific programming language. It is
 designed for someone who has not used Python before. We will work with precipitation and
-stream discharge data for Boulder County."
+stream discharge data for Boulder County in Python but also learn the basics of working with python."
 authors: ['Chris Holdgraf', 'Leah Wasser', 'Data Carpentry']
 category: [course-materials]
 class-lesson: ['get-to-know-python']
 permalink: /course-materials/earth-analytics-python/week-2/python-syntax-and-using-functions/
 nav-title: 'Get to Know Python'
 dateCreated: 2017-05-23
-modified: 2017-06-05
+modified: 2017-06-06
 module-title: 'Get to Know the Python programming language'
 module-nav-title: 'Get to Know Python'
 module-description: 'This module introduces the Python scientific programming language.
@@ -32,8 +32,8 @@ topics:
 {% include toc title="In This Lesson" icon="file-text" %}
 
 In this tutorial, we will explore the basic syntax (structure) or the `Python` programming
-language. We will introduce assignment operators (`<-`, comments (`#`) and functions
-as used in `Python`.
+language. We will introduce assignment operators (`=`), comments (`#`) and functions
+as used in `Python`. 
 
 <div class='notice--success' markdown="1">
 
@@ -55,18 +55,18 @@ directory with it.
 
 </div>
 
-In the [previous module](/course-materials/earth-analytics-python/week-1/setup-r-rstudio), we
-setup `Jupyter notebook` and `python` by installing Anaconda. We also got to know the 
+[Last week](/course-materials/earth-analytics-python/week-1/), we
+setup `Jupyter notebook` and `python` by installing the Anaconda distribution. We also got to know the 
 `Jupyter notebook` interface. Finally, we created a basic
 `Jupyter notebook` report by exporting the contents of a notebook to `html`. In this 
 module, we will explore the basic
 syntax of the `Python` programming language. We will learn how to:
 
 1. import and work with python libraries and associated functions
-2. how to work with vector objects in `python` and
-3. how to import data into a pandas `data.frame` which is the `python` equivalent of a spreadsheet.
+2. work with vector objects in `python` and
+3. import data into a pandas `data.frame` which is the `python` equivalent of a spreadsheet.
 
-Let's start by looking at the code we used in the previous module. Here, we
+Let's start by looking at the code we used last week. Here, we
 
 1. Downloaded some data from figshare using the `urllib.request.urlretrieve` function which is a part of the `urllib` library that comes with python 3.x .
 2. Imported the data into r using the `pd.read_csv` function
@@ -306,7 +306,7 @@ data.plot(x='DATE',
 
 
 
-![png](2017-01-25-R01-python-syntax-and-using-basic-functions_files/2017-01-25-R01-python-syntax-and-using-basic-functions_18_1.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R01-python-syntax-and-using-basic-functions_18_1.png)
 
 
 Notice that the plot above doesn't look exactly the way we may want it to look. We'll learn how to further customize plots in a later lesson. 
@@ -746,7 +746,7 @@ data.plot()
 
 
 
-![png](2017-01-25-R01-python-syntax-and-using-basic-functions_files/2017-01-25-R01-python-syntax-and-using-basic-functions_41_1.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R01-python-syntax-and-using-basic-functions_41_1.png)
 
 
 
@@ -764,7 +764,7 @@ data.plot(x='DATE',
 
 
 
-![png](2017-01-25-R01-python-syntax-and-using-basic-functions_files/2017-01-25-R01-python-syntax-and-using-basic-functions_42_1.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R01-python-syntax-and-using-basic-functions_42_1.png)
 
 
 ### Base functions vs. packages

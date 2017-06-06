@@ -7,14 +7,14 @@ modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['hw-ggplot2-r']
 week: 2
-permalink: /course-materials/earth-analytics/week-2/aggregate-time-series-data-r/
+permalink: /course-materials/earth-analytics-python/week-2/aggregate-time-series-data-r/
 nav-title: 'GRAD / BONUS: aggregate data'
 sidebar:
   nav:
 author_profile: false
 comments: true
 order: 5
-course: "earth-analytics"
+course: "earth-analytics-python"
 topics:
   reproducible-science-and-programming: ['RStudio']
   time-series:

@@ -7,12 +7,12 @@ modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['hw-ggplot2-r']
 nav-title: 'GGPLOT R'
-permalink: /course-materials/earth-analytics/week-2/hw-ggplot2-r/
+permalink: /course-materials/earth-analytics-python/week-2/hw-ggplot2-r/
 module-description: 'This module covers handling with data fields in R so you can efficiently plot time series data using ggplot(). We will use the as.DATE() function to convert dates stored in a data.frame to a date class. We will then plot the time series data using ggplot() and learn how to customize colors and axis labels. '
 module-nav-title: 'Time Series Data in R'
 module-title: 'Work with Sensor Network Derived Time Series Data in R'
 module-type: 'homework'
-course: "earth-analytics"
+course: "earth-analytics-python"
 week: 2
 sidebar:
   nav:

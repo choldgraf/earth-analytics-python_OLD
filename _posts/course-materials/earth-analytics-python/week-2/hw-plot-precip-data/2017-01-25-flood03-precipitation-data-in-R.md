@@ -6,7 +6,7 @@ authors: ['Leah Wasser']
 modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['hw-ggplot2-r']
-permalink: /course-materials/earth-analytics/week-2/precip-in-r/
+permalink: /course-materials/earth-analytics-python/week-2/precip-in-r/
 nav-title: 'Subset time series data in R'
 week: 2
 sidebar:
@@ -14,7 +14,7 @@ sidebar:
 author_profile: false
 comments: true
 order: 3
-course: "earth-analytics"
+course: "earth-analytics-python"
 topics:
   reproducible-science-and-programming: ['RStudio']
   time-series:

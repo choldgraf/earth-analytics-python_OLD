@@ -10,7 +10,7 @@ class-lesson: ['get-to-know-python']
 permalink: /course-materials/earth-analytics-python/week-2/objects-and-variables-in-python/
 nav-title: 'Objects in Python'
 dateCreated: 2017-05-23
-modified: 2017-06-05
+modified: 2017-06-06
 course: "earth-analytics-python"
 week: 2
 sidebar:

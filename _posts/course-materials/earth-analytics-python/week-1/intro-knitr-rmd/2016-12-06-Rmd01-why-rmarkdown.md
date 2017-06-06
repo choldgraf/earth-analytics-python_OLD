@@ -5,7 +5,7 @@ excerpt: "This tutorial introduces the importance of tools supporting documentin
 authors: ['Leah Wasser', 'NEON Data Skills']
 category: [course-materials]
 class-lesson: ['intro-rmarkdown-knitr']
-permalink: /course-materials/earth-analytics/week-1/intro-rmarkdown-knitr/
+permalink: /course-materials/earth-analytics-python/week-1/intro-rmarkdown-knitr/
 nav-title: 'Intro to R Markdown'
 dateCreated: 2016-12-12
 modified: 2017-06-05

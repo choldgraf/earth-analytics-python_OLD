@@ -2,7 +2,7 @@
 This is a collection of course material for the python version of
 Earth Analytics.
 
-# Building Jekyll Materials
+# Build Jekyll Materials
 This repository is designed to do two primary conversion steps. Both of
 these are done with python scripts in the `scripts` folder.
 
@@ -86,7 +86,7 @@ bundle exec jekyll serve
 ```
 
 You can view the site locally using http://localhost:4000 in your browser.
-NOTE: if the config BASEURL is not correct, the site won't build locally properly.
+NOTE: if the config siteURL is not correct, the site won't build locally properly.
 
 ## Build Notes:
 
@@ -95,8 +95,4 @@ NOTE: if the config BASEURL is not correct, the site won't build locally properl
 
 ## CSS
 
-Currently, we are using `less`. to install `less`
-
-1. install nodejs (npm) https://nodejs.org/en/
-2. install less : `sudo npm install less -g` NOTE: you need administration access to install 
-
+Currently, we are using `sass` for all css.

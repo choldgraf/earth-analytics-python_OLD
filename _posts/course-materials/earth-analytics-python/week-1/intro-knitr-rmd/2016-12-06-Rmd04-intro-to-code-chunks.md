@@ -8,7 +8,7 @@ authors: [Leah Wasser, NEON Data Skills]
 category: [course-materials]
 modified: 2017-06-05
 class-lesson: ['intro-rmarkdown-knitr']
-permalink: /course-materials/earth-analytics/week-1/code-chunks-comments-knitr/
+permalink: /course-materials/earth-analytics-python/week-1/code-chunks-comments-knitr/
 nav-title: 'Code Chunks'
 week: 1
 sidebar:

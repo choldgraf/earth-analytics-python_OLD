@@ -2,11 +2,11 @@
 layout: single
 title: "Work with Precipitation Data in R - 2013 Colorado Floods"
 excerpt: "This lesson provides students wiht an example of a data driven report to emphsize the importance of connecting data, documentation and results."
-authors: ['Leah Wasser', 'NEON Data Skills', 'Mariela Perignon']
+authors: ['Leah Wasser', 'NEON Data Skills']
 modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['co-floods-1-intro']
-permalink: /course-materials/earth-analytics/week-1/co-floods-data-example-r/
+permalink: /course-materials/earth-analytics-python/week-1/co-floods-data-example-r/
 nav-title: 'CO Floods Data Example'
 week: 1
 sidebar:

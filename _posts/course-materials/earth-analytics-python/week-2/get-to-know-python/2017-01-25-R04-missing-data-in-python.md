@@ -8,7 +8,7 @@ class-lesson: ['get-to-know-python']
 permalink: /course-materials/earth-analytics-python/week-2/missing-data-in-python-na/
 nav-title: 'Missing data'
 dateCreated: 2017-05-23
-modified: 2017-06-05
+modified: 2017-06-06
 week: 2
 sidebar:
   nav:

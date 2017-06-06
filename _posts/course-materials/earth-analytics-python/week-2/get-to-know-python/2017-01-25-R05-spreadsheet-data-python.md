@@ -9,7 +9,7 @@ course: "earth-analytics-python"
 permalink: /course-materials/earth-analytics-python/week-2/spreadsheet-data-in-R/
 nav-title: 'Spreadsheet Data in R'
 dateCreated: 2016-12-13
-modified: 2017-06-05
+modified: 2017-06-06
 week: 2
 sidebar:
   nav:
@@ -17,7 +17,6 @@ author_profile: false
 comments: true
 order: 5
 ---
-
 
 
 {% include toc title="In This Lesson" icon="file-text" %}
@@ -46,7 +45,7 @@ directory with it.
 </div>
 
 In the homework from week 1, we used the code below to create a report with `knitr`
-in `RStudio`.
+in `Notebooks`. 
 
 
 ```python
@@ -493,7 +492,7 @@ boulder_precip.plot('DATE', 'PRECIP')
 
 
 
-![png](/Users/lewa8222/Documents/github/earth-analytics-python/images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R05-spreadsheet-data-python_22_1.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R05-spreadsheet-data-python_22_1.png)
 
 
 
@@ -505,7 +504,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](/Users/lewa8222/Documents/github/earth-analytics-python/images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R05-spreadsheet-data-python_23_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R05-spreadsheet-data-python_23_0.png)
 
 
 
@@ -548,5 +547,5 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](/Users/lewa8222/Documents/github/earth-analytics-python/images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R05-spreadsheet-data-python_26_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R05-spreadsheet-data-python_26_0.png)
 

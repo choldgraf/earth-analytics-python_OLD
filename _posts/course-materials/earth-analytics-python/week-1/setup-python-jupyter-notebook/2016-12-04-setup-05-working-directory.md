@@ -10,10 +10,10 @@ nav-title: 'Setup Working Directory'
 week: 1
 sidebar:
   nav:
-class-lesson: ['setup-r-rstudio']
-permalink: course-materials/earth-analytics/week-1/setup-working-directory/
+class-lesson: ['setup-python-jupyter']
+permalink: course-materials/earth-analytics-python/week-1/setup-working-directory/
 dateCreated: 2016-12-12
-modified: 2017-06-05
+modified: 2017-06-06
 author_profile: false
 comments: true
 order: 5

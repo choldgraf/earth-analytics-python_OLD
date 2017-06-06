@@ -8,7 +8,7 @@ authors: ['Leah Wasser']
 modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['intro-rmarkdown-knitr']
-permalink: /course-materials/earth-analytics/week-1/intro-rmarkdown-knitr6/
+permalink: /course-materials/earth-analytics-python/week-1/intro-rmarkdown-knitr6/
 nav-title: 'R Markdown Resources'
 week: 1
 sidebar:

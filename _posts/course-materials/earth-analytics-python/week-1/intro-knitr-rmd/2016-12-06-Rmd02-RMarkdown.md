@@ -7,7 +7,7 @@ authors: [Leah Wasser, NEON Data Skills]
 modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['intro-rmarkdown-knitr']
-permalink: /course-materials/earth-analytics/week-1/intro-rmarkdown-knitr2/
+permalink: /course-materials/earth-analytics-python/week-1/intro-rmarkdown-knitr2/
 nav-title: 'Create R Markdown File'
 week: 1
 sidebar:
