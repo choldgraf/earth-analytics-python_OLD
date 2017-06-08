@@ -2,9 +2,12 @@ name: earth-analytics-python
 channels:
   - conda-forge
 dependencies:
+  # Core scientific python
   - numpy
   - matplotlib
   - python=3
+
+  # Geo stuff
   - rasterstats
   - geopy
   - cartopy
@@ -13,7 +16,13 @@ dependencies:
   - contextily
   - pysal
 
+  # Jupyter Environment
+  - notebook
+  - ipython
+  - jupyter_contrib_nbextensions
+
   - pip:
+      # Utilities
       - download
       - nbgrader
       - mne
