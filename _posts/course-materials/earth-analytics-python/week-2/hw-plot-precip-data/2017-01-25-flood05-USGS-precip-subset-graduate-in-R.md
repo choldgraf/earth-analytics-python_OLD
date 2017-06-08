@@ -3,18 +3,18 @@ layout: single
 title: "Subset & aggregate time series precipitation data in R using mutate(), group_by() and summarise()"
 excerpt: "This lesson introduces the mutate() and group_by() dplyr functions - which allow you to aggregate or summarize time series data by a particular field - in this case we will aggregate data by day to get daily precipitation totals for Boulder during the 2013 floods."
 authors: ['Leah Wasser']
-modified: 2017-05-25
+modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['hw-ggplot2-r']
 week: 2
-permalink: /course-materials/earth-analytics/week-2/aggregate-time-series-data-r/
+permalink: /course-materials/earth-analytics-python/week-2/aggregate-time-series-data-r/
 nav-title: 'GRAD / BONUS: aggregate data'
 sidebar:
   nav:
 author_profile: false
 comments: true
 order: 5
-course: "earth-analytics"
+course: "earth-analytics-python"
 topics:
   reproducible-science-and-programming: ['RStudio']
   time-series:
@@ -376,7 +376,7 @@ ax.set(title="histogram of data");
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood05-USGS-precip-subset-graduate-in-R_9_0.png)
+![png](2017-01-25-flood05-USGS-precip-subset-graduate-in-R_files/2017-01-25-flood05-USGS-precip-subset-graduate-in-R_9_0.png)
 
 
 
@@ -398,7 +398,7 @@ ax.set(title="This looks better after the reimporting with\n no data values spec
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood05-USGS-precip-subset-graduate-in-R_11_0.png)
+![png](2017-01-25-flood05-USGS-precip-subset-graduate-in-R_files/2017-01-25-flood05-USGS-precip-subset-graduate-in-R_11_0.png)
 
 
 
@@ -553,7 +553,7 @@ ax.set(xlabel='Date', ylabel='Precipitation (Inches)',
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood05-USGS-precip-subset-graduate-in-R_20_0.png)
+![png](2017-01-25-flood05-USGS-precip-subset-graduate-in-R_files/2017-01-25-flood05-USGS-precip-subset-graduate-in-R_20_0.png)
 
 
 
@@ -614,7 +614,7 @@ ax.set(xlabel='Date', ylabel='Precipitation (Inches)',
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood05-USGS-precip-subset-graduate-in-R_25_0.png)
+![png](2017-01-25-flood05-USGS-precip-subset-graduate-in-R_files/2017-01-25-flood05-USGS-precip-subset-graduate-in-R_25_0.png)
 
 
 
@@ -765,7 +765,7 @@ ax.set(xlabel='Date', ylabel='Precipitation (Inches)',
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood05-USGS-precip-subset-graduate-in-R_31_0.png)
+![png](2017-01-25-flood05-USGS-precip-subset-graduate-in-R_files/2017-01-25-flood05-USGS-precip-subset-graduate-in-R_31_0.png)
 
 
 
@@ -976,7 +976,7 @@ ax.set(xlabel='Date', ylabel='Precipitation (Inches)',
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/hw-plot-precip-data/2017-01-25-flood05-USGS-precip-subset-graduate-in-R_39_0.png)
+![png](2017-01-25-flood05-USGS-precip-subset-graduate-in-R_files/2017-01-25-flood05-USGS-precip-subset-graduate-in-R_39_0.png)
 
 
 

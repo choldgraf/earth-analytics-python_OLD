@@ -3,7 +3,7 @@ layout: single
 title: "GIS in Python: Intro to Coordinate Reference Systems"
 excerpt: "This lesson introduces what a coordinate reference system is. We will use the Python programming language to explore and reproject data into geographic and projected CRSs."
 authors: ['Chris Holdgraf', 'Leah Wasser']
-modified: 2017-05-25
+modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['class-intro-spatial-python']
 permalink: /course-materials/earth-analytics-python/week-5/intro-to-coordinate-reference-systems/
@@ -208,7 +208,7 @@ ax.set(xlabel="Longitude (Degrees)", ylabel="Latitude (Degrees)",
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial03-crs-intro_7_1.png)
+![png](2016-12-06-spatial03-crs-intro_files/2016-12-06-spatial03-crs-intro_7_1.png)
 
 
 Next, let's add three coordinate locations to our map. Note that the UNITS are
@@ -267,7 +267,7 @@ ax.set(xlabel="Longitude (Degrees)", ylabel="Latitude (Degrees)",
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial03-crs-intro_12_1.png)
+![png](2016-12-06-spatial03-crs-intro_files/2016-12-06-spatial03-crs-intro_12_1.png)
 
 
 # how do i adjust fonts for maps?
@@ -299,7 +299,7 @@ ax.set(title="World Map - Geographic Coordinate Reference System (long/lat degre
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial03-crs-intro_14_1.png)
+![png](2016-12-06-spatial03-crs-intro_files/2016-12-06-spatial03-crs-intro_14_1.png)
 
 
 ## Geographic CRS - The Good & The Less Good
@@ -353,7 +353,7 @@ ax.set(title="World map: Robinson Coordinate Reference System",
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial03-crs-intro_17_1.png)
+![png](2016-12-06-spatial03-crs-intro_files/2016-12-06-spatial03-crs-intro_17_1.png)
 
 
 What happens if we add the same Lat / Long coordinate locations that
@@ -369,7 +369,7 @@ ax.figure
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial03-crs-intro_19_0.png)
+![png](2016-12-06-spatial03-crs-intro_files/2016-12-06-spatial03-crs-intro_19_0.png)
 
 
 
@@ -410,7 +410,7 @@ city_locations_robin.plot(ax=ax, markersize=10, color='springgreen')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial03-crs-intro_22_1.png)
+![png](2016-12-06-spatial03-crs-intro_files/2016-12-06-spatial03-crs-intro_22_1.png)
 
 
 ## Compare Maps
@@ -447,7 +447,7 @@ _ = ax.set(title="World Map Projected - Robinson (Meters)")
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial03-crs-intro_24_0.png)
+![png](2016-12-06-spatial03-crs-intro_files/2016-12-06-spatial03-crs-intro_24_0.png)
 
 
 Let's add the points to the map
@@ -477,7 +477,7 @@ _ = ax.set(title="World Map Projected - Robinson (Meters)")
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial03-crs-intro_26_0.png)
+![png](2016-12-06-spatial03-crs-intro_files/2016-12-06-spatial03-crs-intro_26_0.png)
 
 
 ## Why Multiple CRS?

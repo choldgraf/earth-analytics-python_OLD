@@ -8,11 +8,11 @@ nav-title: 'File Organization 101'
 week: 1
 sidebar:
   nav:
-class-lesson: ['setup-r-rstudio']
-permalink: course-materials/earth-analytics/week-1/file-organization-101/
+class-lesson: ['setup-python-jupyter']
+permalink: course-materials/earth-analytics-python/week-1/file-organization-101/
 dateCreated: 2016-12-12
-modified: 2017-05-25
-course: 'earth-analytics'
+modified: 2017-06-06
+course: 'earth-analytics-python'
 author_profile: false
 comments: true
 order: 4

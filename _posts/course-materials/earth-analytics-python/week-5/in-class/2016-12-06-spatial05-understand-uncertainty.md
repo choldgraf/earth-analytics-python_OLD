@@ -3,7 +3,7 @@ layout: single
 title: "Lidar Remote sensing data - Understand uncertainty / error associated with height metrics extracted from lidar raster data in Python"
 excerpt: "In this lesson, we cover the topic of uncertainty. We focus on the types of uncertainty that you can expect when working with tree height data both derived from lidar remote sensing and human measurements. Further we cover sources of error including systematic vs. random error."
 authors: ['Chris Holdgraf', 'Carson Farmer', 'Leah Wasser']
-modified: 2017-05-25
+modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['class-intro-spatial-python']
 permalink: /course-materials/earth-analytics-python/week-5/understand-uncertainty-lidar/
@@ -146,7 +146,7 @@ _ = ax.set(title="Distribution of tree height measurements (m)", ylabel="Height 
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial05-understand-uncertainty_6_1.png)
+![png](2016-12-06-spatial05-understand-uncertainty_files/2016-12-06-spatial05-understand-uncertainty_6_1.png)
 
 
 In the example above, our mean tree height value is towards the center of
@@ -178,7 +178,7 @@ ax.set_title(ax.get_title(),
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial05-understand-uncertainty_9_1.png)
+![png](2016-12-06-spatial05-understand-uncertainty_files/2016-12-06-spatial05-understand-uncertainty_9_1.png)
 
 
 ## Measurement accuracy
@@ -2862,7 +2862,7 @@ SJER_chm_gpd.plot(ax=ax, markersize=50, color='r')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial05-understand-uncertainty_39_1.png)
+![png](2016-12-06-spatial05-understand-uncertainty_files/2016-12-06-spatial05-understand-uncertainty_39_1.png)
 
 
 
@@ -2915,7 +2915,7 @@ SJER_plots.plot(ax=ax, markersize=500, color='r')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial05-understand-uncertainty_42_1.png)
+![png](2016-12-06-spatial05-understand-uncertainty_files/2016-12-06-spatial05-understand-uncertainty_42_1.png)
 
 
 
@@ -3019,7 +3019,7 @@ ax.set_title(ax.get_title(),
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial05-understand-uncertainty_46_1.png)
+![png](2016-12-06-spatial05-understand-uncertainty_files/2016-12-06-spatial05-understand-uncertainty_46_1.png)
 
 
 
@@ -3082,7 +3082,7 @@ SJER_final_height["lidar_measured"].plot(kind="bar")
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial05-understand-uncertainty_49_1.png)
+![png](2016-12-06-spatial05-understand-uncertainty_files/2016-12-06-spatial05-understand-uncertainty_49_1.png)
 
 
 ## View interactive scatterplot

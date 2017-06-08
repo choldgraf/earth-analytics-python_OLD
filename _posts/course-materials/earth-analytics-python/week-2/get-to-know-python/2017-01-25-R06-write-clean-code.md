@@ -4,11 +4,11 @@ title: "Write Clean Code in R"
 excerpt: "#"
 authors: ['Leah Wasser', 'Data Carpentry']
 category: [course-materials]
-class-lesson: ['get-to-know-r']
+class-lesson: ['get-to-know-python']
 permalink: /course-materials/earth-analytics-python/week-2/write-clean-code-with-r/
 nav-title: 'Write Clean Code'
 dateCreated: 2016-12-13
-modified: 2017-05-25
+modified: 2017-06-05
 week: 2
 sidebar:
   nav:
@@ -290,7 +290,7 @@ my_data.plot('DATE', 'PRECIP')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-2/get-to-know-python/2017-01-25-R06-write-clean-code_4_1.png)
+![png](2017-01-25-R06-write-clean-code_files/2017-01-25-R06-write-clean-code_4_1.png)
 
 
 

@@ -3,7 +3,7 @@ layout: single
 title: "GIS in Python: how to reproject vector data in different coordinate reference systems (crs) in Python."
 excerpt: "In this lesson we cover how to reproject a vector dataset using the spTransform() function in R."
 authors: ['Chris Holdgraf', 'Leah Wasser']
-modified: 2017-05-25
+modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['class-intro-spatial-python']
 permalink: /course-materials/earth-analytics-python/week-5/reproject-vector-data/
@@ -248,7 +248,7 @@ ax.set(title="Map of Continental US State Boundaries\n United States Census Bure
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial04-reproject-vector-data-R_8_1.png)
+![png](2016-12-06-spatial04-reproject-vector-data-R_files/2016-12-06-spatial04-reproject-vector-data-R_8_1.png)
 
 
 ## U.S. Boundary Layer
@@ -290,7 +290,7 @@ country_boundary_us.plot(ax=ax, color='k', alpha=.5)
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial04-reproject-vector-data-R_11_1.png)
+![png](2016-12-06-spatial04-reproject-vector-data-R_files/2016-12-06-spatial04-reproject-vector-data-R_11_1.png)
 
 
 Next, let's add the location of our study area sites.
@@ -313,7 +313,7 @@ ax.set(title='San Joachin Experimental Range \n Area of interest (AOI)')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial04-reproject-vector-data-R_13_1.png)
+![png](2016-12-06-spatial04-reproject-vector-data-R_files/2016-12-06-spatial04-reproject-vector-data-R_13_1.png)
 
 
 Our SJER AOI layer plots nicely. Let's next add it as a layer on top of the U.S. states and boundary
@@ -334,7 +334,7 @@ country_boundary_us.plot(ax=ax, color='k', alpha=.5)
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial04-reproject-vector-data-R_15_1.png)
+![png](2016-12-06-spatial04-reproject-vector-data-R_files/2016-12-06-spatial04-reproject-vector-data-R_15_1.png)
 
 
 
@@ -354,7 +354,7 @@ ax.set(title="Map of Continental US State Boundaries \n with SJER AOI")
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial04-reproject-vector-data-R_16_1.png)
+![png](2016-12-06-spatial04-reproject-vector-data-R_files/2016-12-06-spatial04-reproject-vector-data-R_16_1.png)
 
 
 What do you notice about the resultant plot? Do you see the AOI boundary in the 
@@ -521,7 +521,7 @@ ax.set(title="Map of Continental US State Boundaries \n with SJER AOI")
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial04-reproject-vector-data-R_24_1.png)
+![png](2016-12-06-spatial04-reproject-vector-data-R_files/2016-12-06-spatial04-reproject-vector-data-R_24_1.png)
 
 
 
@@ -589,7 +589,7 @@ ax.set(title="Map of Continental US State Boundaries \n with SJER AOI")
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial04-reproject-vector-data-R_26_1.png)
+![png](2016-12-06-spatial04-reproject-vector-data-R_files/2016-12-06-spatial04-reproject-vector-data-R_26_1.png)
 
 
 
@@ -662,7 +662,7 @@ ax.legend(["Plot type", "Roads"])
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python//week-5/in-class/2016-12-06-spatial04-reproject-vector-data-R_29_1.png)
+![png](2016-12-06-spatial04-reproject-vector-data-R_files/2016-12-06-spatial04-reproject-vector-data-R_29_1.png)
 
 
 

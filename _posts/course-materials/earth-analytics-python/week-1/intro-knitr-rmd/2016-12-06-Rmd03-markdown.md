@@ -4,10 +4,10 @@ title: "Intro to Markdown"
 excerpt: 'This tutorial cover how to use Markdown syntax in R and then
 render it to html using knitr.'
 authors: [Leah Wasser, NEON Data Skills]
-modified: 2017-05-25
+modified: 2017-06-05
 category: [course-materials]
 class-lesson: ['intro-rmarkdown-knitr']
-permalink: /course-materials/earth-analytics/week-1/intro-to-markdown/
+permalink: /course-materials/earth-analytics-python/week-1/intro-to-markdown/
 nav-title: 'Intro to Markdown'
 week: 1
 sidebar:
