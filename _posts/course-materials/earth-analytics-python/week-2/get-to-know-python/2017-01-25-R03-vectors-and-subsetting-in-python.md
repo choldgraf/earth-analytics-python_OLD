@@ -9,7 +9,7 @@ course: "earth-analytics-python"
 permalink: /course-materials/earth-analytics-python/week-2/work-with-data-types-python/
 nav-title: 'Numpy arrays'
 dateCreated: 2017-05-23
-modified: 2017-06-06
+modified: 2017-06-13
 week: 2
 sidebar:
   nav:
@@ -31,8 +31,8 @@ At the end of this activity, you will be able to:
 
 ## <i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What you need
 
-You need the anaconda distribution of Python 3.x and Jupyter Notebooks to complete this tutorial. Also we recommend have you
-have an `earth-analytics` directory setup on your computer with a `/data`
+You need `Python 3.x` and `Jupyter notebooks` to complete this tutorial. Also you should have
+an `earth-analytics` directory setup on your computer with a `/data`
 directory with it.
 
 # need to fix these links to be python...

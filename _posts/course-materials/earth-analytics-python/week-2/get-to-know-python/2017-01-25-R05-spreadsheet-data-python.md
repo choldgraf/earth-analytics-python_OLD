@@ -1,15 +1,15 @@
 ---
 layout: single
-title: "Working with spreadsheet (tabular) data in R"
+title: "Work with tabular spreadsheet data in Python"
 excerpt: "About."
 authors: ['Data Carpentry', 'Leah Wasser']
 category: [course-materials]
 class-lesson: ['get-to-know-python']
 course: "earth-analytics-python"
-permalink: /course-materials/earth-analytics-python/week-2/spreadsheet-data-in-R/
-nav-title: 'Spreadsheet Data in R'
+permalink: /course-materials/earth-analytics-python/week-2/spreadsheet-data-in-python/
+nav-title: 'Spreadsheet Data in Python'
 dateCreated: 2016-12-13
-modified: 2017-06-06
+modified: 2017-06-13
 week: 2
 sidebar:
   nav:
@@ -21,7 +21,7 @@ order: 5
 
 {% include toc title="In This Lesson" icon="file-text" %}
 
-This lesson introduces the data.frame which is very similar to working with
+This lesson introduces the `data.frame` which is very similar to working with
 a spreadsheet in `Python`.
 
 <div class='notice--success' markdown="1">
@@ -29,13 +29,14 @@ a spreadsheet in `Python`.
 ## <i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives
 At the end of this activity, you will be able to:
 
-* Open .csv or text file containing tabular (spreadsheet) formatted data in Python.
-* Quickly plot the data using the GGPLOT2 function qplot()
+* Open `.csv` or text file containing tabular (spreadsheet) formatted data in `Python`.
+* Quickly plot the data using the Pandas function `.plot()`
+* Quickly plot the data using Matplotlib plotting
 
 ## <i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What you need
 
-You need R and RStudio to complete this tutorial. Also we recommend have you
-have an `earth-analytics` directory setup on your computer with a `/data`
+You need `Python 3.x` and `Jupyter notebooks` to complete this tutorial. Also you should have
+an `earth-analytics` directory setup on your computer with a `/data`
 directory with it.
 
 * [How to Setup R / R Studio](/course-materials/earth-analytics/week-1/setup-r-rstudio/)
@@ -74,12 +75,6 @@ os.getcwd()
 
 
 ```python
-#paths = et.data.get_data('week_02')
-#print(paths)
-```
-
-
-```python
 # download data from figshare (note - we did this in a previous lesson)
 urllib.request.urlretrieve(url='https://ndownloader.figshare.com/files/7010681', 
                            filename= 'data/boulder-precip.csv')
@@ -88,17 +83,17 @@ urllib.request.urlretrieve(url='https://ndownloader.figshare.com/files/7010681',
 
 
 
-    ('data/boulder-precip.csv', <http.client.HTTPMessage at 0x119d863c8>)
+    ('data/boulder-precip.csv', <http.client.HTTPMessage at 0x110028390>)
 
 
 
-Let's break the code above down. First, we use the `urllib.request.urlretrieve()` function to
-download a datafile. In this case, the data are housed on
+Remember that earlier in the lessons we learned that the code above  `urllib.request.urlretrieve()` is used to 
+download a datafile. In this case, the data are stored on
 <a href="http://www.figshare.com" target="_blank">Figshare</a> - a
 popular data repository that is free to use if your data are cumulatively
 smaller than 20gb.
 
-Notice that `urllib.request.urlretrieve()` function has two **ARGUMENTS**:
+Remember that `urllib.request.urlretrieve()` function has two function **ARGUMENTS**:
 
 1. **url**: this is the path to the data file that you wish to download
 2. **filename**: this is the location on your computer (in this case: `/data`) and name of the
@@ -180,34 +175,9 @@ boulder_precip.dtypes
 
 
 
-
-```python
-# ```{r import-data }
-
-# # import data
-
-# boulder_precip <- read.csv(file="data/boulder-precip.csv")
-
-
-
-# # view first few rows of the data
-
-# head(boulder_precip)
-
-
-
-# # view the format of the boulder_precip object in R
-
-# str(boulder_precip)
-
-# ```
-
-```
-
 <div class="notice--warning" markdown="1">
 
-
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Optional challenge
 What is the format associated with each column for the `boulder_precip`
 data.frame? Describe the attributes of each format. Can you perform math
 on each column? Why or why not?
@@ -232,10 +202,8 @@ Each cell in a dataframe is located or defined by a x,y (column, row) index valu
 
 Remember that in python, this index value begins at 0!  
 
-
 A data frame can be created manually, however most commonly they are generated when
 you important a text file or spreadsheet into Python using the Pandas function `pd.read_csv`.
-
 
 
 ## Extracting / Specifying "columns" By Name
@@ -311,7 +279,7 @@ boulder_precip['PRECIP']
 
 ## View Structure of a Data Frame
 
-We can explore the format of our data frame too. For instance, we can see how many rows and columns our dataframe has using the shape attribute. 
+We can explore the format of our data frame too. For instance, we can see how many rows and columns our dataframe has using the shape attribute. Here the shape of the object is returned as an array containing two numbers (# of rows, # of columns)
 
 
 ```python
@@ -328,17 +296,18 @@ boulder_precip.shape
 
 <div class="notice--warning" markdown="1">
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> 
-## Optional challenge
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> ## Optional challenge
 
-Using our DataFrame surveys_df, try out the attributes & methods below to see what they return.
+Using our DataFrame `boulder_precip`, try out the attributes & methods below to see what they return.
 
-surveys_df.columns
-surveys_df.shape Take note of the output of shape - what format does it return the shape of the DataFrame in?
+* boulder_precip.columns
+* boulder_precip.shape 
 
-HINT: More on tuples, here.
-surveys_df.head() Also, what does surveys_df.head(15) do?
-surveys_df.tail()
+Take note of the output of shape - what format does it return the shape of the DataFrame in? HINT: More on tuples, here.
+
+* `boulder_precip.head()` 
+* What does `boulder_precip.head(15)` do?
+* `boulder_precip.tail()`
 
 </div>
 
@@ -359,7 +328,7 @@ boulder_precip.dtypes
 
 
 ## Calculate dataframe statistics
-We can quickly calculate summary statistics too.
+We can quickly calculate summary statistics too. First let's explore the column names using `.columns.values`. We can use the `.describe()` function to get summary statistics about numeric columns in our data.
 
 
 
@@ -487,12 +456,12 @@ boulder_precip.plot('DATE', 'PRECIP')
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x11ee2cf98>
+    <matplotlib.axes._subplots.AxesSubplot at 0x110072208>
 
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R05-spreadsheet-data-python_22_1.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R05-spreadsheet-data-python_20_1.png)
 
 
 
@@ -504,7 +473,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R05-spreadsheet-data-python_23_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R05-spreadsheet-data-python_21_0.png)
 
 
 
@@ -527,15 +496,19 @@ boulder_precip.dtypes
 
 Let's take a little time to customize our plots. Below we add the following arguments to our plot:
 
-* title: add a title to your plot
-* legend = False: turn off the legend for hte plot
-* kind = bar: create a bar plot
+* **title:** add a title to your plot
+* **legend = False:** turn off the legend for hte plot
+* **kind = bar**: create a bar plot
+
+
+## need to better understand this. the code below now works but maybe this is a difference between pandas plot and matplotlib?
 
 
 ```python
 # here it seems that pandas understand dates?? does it by default?
 fig, ax = plt.subplots()
-ax.plot('DATE', 'PRECIP', data=boulder_precip)
+
+ax.bar(boulder_precip['DATE'].values, boulder_precip['PRECIP'].values, data=boulder_precip)
 ax.set_title("Total Daily Precipitation")
 
 #ax = boulder_precip.plot('DATE', 'PRECIP', kind='bar')
@@ -544,8 +517,9 @@ ax.set_ylabel("Total Precip (inches)", fontsize=12)
 #ax.plot('DATE', 'PRECIP', data=boulder_precip)
 #ax.xaxis.set_major_locator(dates.MonthLocator())
 plt.setp(ax.get_xticklabels(), rotation=45);
+
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R05-spreadsheet-data-python_26_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R05-spreadsheet-data-python_24_0.png)
 

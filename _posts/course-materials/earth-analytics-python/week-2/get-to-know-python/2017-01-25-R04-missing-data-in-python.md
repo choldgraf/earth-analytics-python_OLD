@@ -8,7 +8,7 @@ class-lesson: ['get-to-know-python']
 permalink: /course-materials/earth-analytics-python/week-2/missing-data-in-python-na/
 nav-title: 'Missing data'
 dateCreated: 2017-05-23
-modified: 2017-06-06
+modified: 2017-06-13
 week: 2
 sidebar:
   nav:
@@ -34,8 +34,8 @@ At the end of this activity, you will be able to:
 
 ## <i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What you need
 
-You need R and RStudio to complete this tutorial. Also we recommend have you
-have an `earth-analytics` directory setup on your computer with a `/data`
+You need `Python 3.x` and `Jupyter notebooks` to complete this tutorial. Also you should have
+an `earth-analytics` directory setup on your computer with a `/data`
 directory with it.
 
 * [How to Setup R / R Studio](/course-materials/earth-analytics/week-1/setup-r-rstudio/)
