@@ -3,7 +3,7 @@ layout: single
 title: "Customize matplotlib plots in Python - earth analytics - data science for scientists"
 excerpt: 'Matplotlib is one of the most commonly used plotting library in Python. This lesson covers how to create a plot using matplotlib and how to customize matplotlib plot colors and label axes in Python.'
 authors: ['Chris Holdgraf', 'Leah Wasser', 'Data Carpentry']
-modified: 2017-06-13
+modified: 2017-06-14
 category: [course-materials]
 class-lesson: ['time-series-python']
 course: 'earth-analytics-python'
@@ -50,6 +50,21 @@ directory with it.
 * [Intro to the R & RStudio Interface](/course-materials/earth-analytics/week-1/intro-to-r-and-rstudio)
 
 </div>
+
+## Important - Data Organization
+Before you begin this lesson series, be sure that you've downloaded the dataset above.
+You will need to UNZIP the zip file. When you do this, be sure that your directory
+looks like the image below: note that all of the data are within the week2
+directory. They are not nested within another directory. You may have to copy and
+paste your files to make this look right.
+
+<figure>
+<a href="{{ site.baseurl }}/images/course-materials/earth-analytics/week-2/week2-data.png">
+<img src="{{ site.baseurl }}/images/course-materials/earth-analytics/week-2/week2-data.png" alt="week 2 file organization">
+</a>
+<figcaption>Your `week2` file directory should look like the one above. Note that
+the data directly under the week-2 folder.</figcaption>
+</figure>
 
 In our week 1 homework, we used the pandas plot function to plot our data.
 In this tutorial, we'll explore more advanced plotting techniques using matplotlib.
