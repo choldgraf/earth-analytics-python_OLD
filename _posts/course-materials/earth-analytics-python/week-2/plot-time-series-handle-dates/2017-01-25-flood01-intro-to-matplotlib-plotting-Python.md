@@ -88,8 +88,7 @@ plt.style.use('ggplot')
 ```python
 # be sure to set your working directory\n",
 os.chdir("/Users/lewa8222/Documents/earth-analytics/")
-# check to ensure your working directory is set properly
-os.getcwd()
+
 ```
 
 
@@ -97,6 +96,15 @@ os.getcwd()
 
     '/Users/lewa8222/Documents/earth-analytics'
 
+
+
+
+```python
+# view all styles 
+#print(plt.style.available)
+```
+
+    ['_classic_test', 'bmh', 'classic', 'dark_background', 'fivethirtyeight', 'ggplot', 'grayscale', 'seaborn-bright', 'seaborn-colorblind', 'seaborn-dark-palette', 'seaborn-dark', 'seaborn-darkgrid', 'seaborn-deep', 'seaborn-muted', 'seaborn-notebook', 'seaborn-paper', 'seaborn-pastel', 'seaborn-poster', 'seaborn-talk', 'seaborn-ticks', 'seaborn-white', 'seaborn-whitegrid', 'seaborn']
 
 
 In the previous lessons we downloaded and imported data from figshare into Python using the following code.
@@ -132,7 +140,7 @@ boulder_precip.plot('DATE', 'PRECIP')
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_7_1.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_8_1.png)
 
 
 ## Plot with matplotlib
@@ -153,7 +161,7 @@ fig, ax = plt.subplots()
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_9_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_10_0.png)
 
 
 2. Define the plot elements including the x and y variables and the data to be used
@@ -178,7 +186,7 @@ ax.plot('DATE', 'PRECIP', data=boulder_precip)
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_11_1.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_12_1.png)
 
 
 Then finally we can refine our plot adding labels and other elements. 
@@ -195,7 +203,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_13_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_14_0.png)
 
 
 
@@ -224,7 +232,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_15_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_16_0.png)
 
 
 
@@ -277,7 +285,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_21_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_22_0.png)
 
 
 
@@ -311,7 +319,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_24_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_25_0.png)
 
 
 We can adjust the transparency using the `alpha=` argument.
@@ -326,7 +334,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_26_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_27_0.png)
 
 
 Or to color each value in the plot differently according to a value in the data by first setting the color argument, c to the column of interest in the data.frame. 
@@ -351,7 +359,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_28_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_29_0.png)
 
 
 ### Bar plots
@@ -368,7 +376,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_30_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_31_0.png)
 
 
 
@@ -387,7 +395,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_32_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_33_0.png)
 
 
 
@@ -420,7 +428,7 @@ plt.setp(ax.get_xticklabels(), rotation=45);
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_35_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_36_0.png)
 
 
 ## Add plot labels
@@ -438,7 +446,7 @@ ax.set(xlabel="Date", ylabel="Precipitation (Inches)", title="Daily Precipitatio
 ```
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_37_0.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/plot-time-series-handle-dates/2017-01-25-flood01-intro-to-matplotlib-plotting-python_38_0.png)
 
 
 

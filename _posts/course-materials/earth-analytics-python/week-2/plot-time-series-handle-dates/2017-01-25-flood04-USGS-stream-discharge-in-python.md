@@ -9,7 +9,7 @@ class-lesson: ['time-series-python']
 course: 'earth-analytics-python'
 week: 2
 permalink: /course-materials/earth-analytics-python/week-2/plot-stream-discharge-timeseries-challenge-python/
-nav-title: 'Plot Stream Discharge Data Python'
+nav-title: 'Subset & plot timeseries data'
 sidebar:
   nav:
 author_profile: false
@@ -22,8 +22,10 @@ topics:
 ---
 
 
-
 {% include toc title="In This Lesson" icon="file-text" %}
+
+# look into https://seaborn.pydata.org/tutorial/aesthetics.html
+
 
 In this data lesson, we explore and visualize stream discharge time series
 data collected by the United States Geological Survey (USGS). You will use everything
@@ -102,6 +104,8 @@ import os
 plt.ion()
 # set working directory -- can i set this as a hidden line of code and then have my usual teaser commented out set your wd line??
 os.chdir("/Users/lewa8222/Documents/earth-analytics/")
+
+plt.style.use('seaborn-white')
 ```
 
 ##  Import USGS Stream Discharge Data Into Python
@@ -240,7 +244,7 @@ ax.set(title="Stream Discharge (CFS) - Boulder Creek, 1986-2016",
 
 <div class="notice--warning" markdown="1">
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Optional challenge
 
 Similar to the previous lesson, take the cleaned discharge data that you just
 plotted and subset it to the time span
