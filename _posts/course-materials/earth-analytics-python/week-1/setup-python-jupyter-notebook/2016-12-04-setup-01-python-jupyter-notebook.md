@@ -6,7 +6,7 @@ title: 'Install & setup Python 3.x and Jupyter Notebook on your laptop'
 attribution: 'These materials were adapted from Software Carpentry materials by Earth Lab.'
 excerpt: 'This tutorial walks you through downloading and installing Python and Jupyter Notebook on your computer.'
 dateCreated: 2017-06-06
-modified: 2017-06-08
+modified: 2017-06-13
 module-title: 'Setup Python 3.x, Jupyter Notebook and Your Working Directory'
 module-description: 'This module walks you through getting Python 3.x and Jupyter notebook setup on your
 laptop. It also introduces file organization strategies.'

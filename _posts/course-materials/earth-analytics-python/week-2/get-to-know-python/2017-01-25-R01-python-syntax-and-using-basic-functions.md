@@ -10,7 +10,7 @@ class-lesson: ['get-to-know-python']
 permalink: /course-materials/earth-analytics-python/week-2/python-syntax-and-using-functions/
 nav-title: 'Get to Know Python'
 dateCreated: 2017-05-23
-modified: 2017-06-08
+modified: 2017-06-13
 module-title: 'Get to Know the Python programming language'
 module-nav-title: 'Get to Know Python'
 module-description: 'This module introduces the Python scientific programming language.
@@ -31,7 +31,7 @@ topics:
 
 {% include toc title="In This Lesson" icon="file-text" %}
 
-In this tutorial, we will explore the basic syntax (structure) or the `Python` programming
+In this tutorial, we will explore the basic syntax (structure) of the `Python` programming
 language. We will introduce assignment operators (`=`), comments (`#`) and functions
 as used in `Python`. 
 
@@ -87,15 +87,7 @@ import pandas as pd
 import numpy as np
 import urllib
 import os
-# Force notebooks to plot figures inline (in the notebook)
-plt.ion()
-# download file from Earth Lab figshare repository
-urllib.request.urlretrieve(url='https://ndownloader.figshare.com/files/7010681', 
-                           filename= 'data/boulder-precip.csv')
-# open data
-data = pd.read_csv('data/boulder-precip.csv')
-data.plot(x='DATE', 
-          y='PRECIP')
+from matplotlib import pyplot as plt
 ```
 
 In this lesson we will walk through the code that we used last week to create our first plot. We will also use functions in the numpy library - a library that is commonly used in python to support mathametical operations. 
@@ -107,7 +99,7 @@ We use the `.chdir()` function from the `os` library to set the working director
 
 `/Users/your-user-name/Documents/earth-analytics/`
 
-`os.getcwd()` can be used to check your current working directory. 
+`os.getcwd()` can be used to check your current working directory to ensure that you are working where you think you are!  
 
 
 ```python
@@ -158,17 +150,15 @@ Plots don't render by default inline or on the screen where your code is in Pyth
 plt.ion()
 ```
 
-## Download data from a website
+Let's next break our script down. 
+After we imported all of the required libraries, we used the `urllib.request.urlretrieve` function to download a data file from figshare, into the data/ directory within our earth-analytics working directory. 
 
-Once we have called all of the required libraries, we downloaded a file from figshare. 
-We used the `urllib.request.urlretrieve` function to download data into the data/ directory within our earth-analytics working directory. 
-
-Notice that this **function** has two arguments
+Notice that the `urllib.request.urlretrieve` **function** has two arguments
 
 1. **url=** the url where our data is located online
-2. **filename=** the location and name of the file that we are downloading. Here we downloaded the data to data/boulder-precip.csv. Thus the file will be called boulder-precip.csv and it will be located in the data directory of our working directory.
+2. **filename=** the location and name of the file that we are downloading. Here we downloaded the data to the directory path/filename: data/boulder-precip.csv. Thus the file will be called boulder-precip.csv and it will be located in the data directory of our working directory.
 
-NOTE: this download won't work if the `data/` directory doesn't already exist! 
+NOTE: downloading the file using this function won't work if the `data/` directory that you tell it to save the file in doesn't already exist! 
 
 
 ```python
@@ -181,7 +171,7 @@ urllib.request.urlretrieve(url='https://ndownloader.figshare.com/files/7010681',
 
 
 
-    ('data/boulder-precip.csv', <http.client.HTTPMessage at 0x1186c06d8>)
+    ('data/boulder-precip.csv', <http.client.HTTPMessage at 0x1117179e8>)
 
 
 
@@ -189,9 +179,7 @@ If the data downloaded correctly, you will recieve a message from python
 
 `('data/boulder-precip.csv', <http.client.HTTPMessage at 0x1186c06d8>)` confirming that the data were downloaded.
 
-## Open data in python
-
-Next, we opened the data in python. To open a .csv file in Python, we use the `read_csv()` function from the `pandas` library. 
+Next, we opened the data in python using the `read_csv` function from the pandas library. 
 
 
 ```python
@@ -199,12 +187,9 @@ Next, we opened the data in python. To open a .csv file in Python, we use the `r
 data = pd.read_csv('data/boulder-precip.csv')
 ```
 
+Once we have opened the data, we can begin to explore it. In python / pandas we can access 'columns' in our data using the syntax:
 
-### Explore tabular data in python
-
-In python / pandas we can access 'columns' in our data using the syntax:
-
-`['column-name-here']`
+`dataFrameName['column-name-here']`
 
 By adding `.head()` to the command we tell python to only return the first 6 rows of the DATE column. 
 
@@ -313,9 +298,8 @@ data.head()
 
 
 
-We can view the structure or type of data in each column using the dtypes attribute. 
+We can view the structure or type of data in each column using the `dtypes` attribute. 
 Notice below that our data have 2 columns. One is of type object and the other is a numeric type - float64. 
-
 
 
 
@@ -327,13 +311,14 @@ data.dtypes
 
 
 
-    DATE       object
-    PRECIP    float64
+    Unnamed: 0      int64
+    DATE           object
+    PRECIP        float64
     dtype: object
 
 
 
-Finally, we can create a quick plot of the data using `.plot`. 
+Finally, we can create a quick plot of the data using the `.plot` function. 
 
 
 ```python
@@ -344,7 +329,7 @@ data.plot(x='DATE',
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x11edf5630>
+    <matplotlib.axes._subplots.AxesSubplot at 0x1117b3cc0>
 
 
 
@@ -583,7 +568,7 @@ Let's run a function that can take multiple arguments: `np.round()`.
 
 ### Function arguments
 
-An argument is a specified input to a function. This inpus needs to be in a particular format for the function to run properly. For instance, the round function requires a NUMERIC input. We can round for instance the letter A!
+An argument is a specified input to a function. This input needs to be in a particular format for the function to run properly. For instance, the round function requires a NUMERIC input. For example we can't round the letter A.
 
 
 
@@ -591,14 +576,21 @@ An argument is a specified input to a function. This inpus needs to be in a part
 np.round(a=3.14159)
 ```
 
+
+
+
+    3.0
+
+
+
 Here, we've called `round()` with just one argument, `3.14159`, and it has
 returned the value `3`.  That's because the default is to round to the nearest
 whole number. If we want more digits we can see how to do that by getting
 information about the `round` function.  We can use `help(round)` to look at the
 help for this function using `?round`.
 
-# what's the easiest way to get a function documentation in jupyter?
-# what does the cell below do? is there a quick way to see all of the arguments available for a function and the methods /attributes available for an object?
+
+# is there a quick way to see all of the arguments available for a function and the methods /attributes available for an object?
 
 
 ```python
@@ -702,8 +694,9 @@ np.round(2, 3.14159)
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-37-e54a09d8d9f3> in <module>()
-    ----> 1 np.round(2, 3.14159)
+    <ipython-input-34-47fcf09b3043> in <module>()
+          1 # but what happens here?
+    ----> 2 np.round(2, 3.14159)
     
 
     /Users/lewa8222/anaconda/lib/python3.6/site-packages/numpy/core/fromnumeric.py in round_(a, decimals, out)
@@ -748,9 +741,7 @@ Notice that we provided the arguments as follows:
 
 `np.round(2, 3.14159)`
 
-Python tried to round the value 2 to 3.14159 which is a decimal rather than an integer value. 
-
-However, if we explicetly name each argument and assign it it's appropriate value, then we can switch the order:
+Python tried to round the value 2 to 3.14159 which is a decimal rather than an integer value. However, if we explicetly name each argument and assign it it's appropriate value, then we can switch the order:
 
 
 ```python
@@ -784,7 +775,7 @@ data.plot()
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x111d168d0>
+    <matplotlib.axes._subplots.AxesSubplot at 0x112189eb8>
 
 
 
@@ -802,7 +793,7 @@ data.plot(x='DATE',
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x11ed75908>
+    <matplotlib.axes._subplots.AxesSubplot at 0x1122f9c88>
 
 
 
@@ -833,11 +824,6 @@ doing.
 ## Get Information About A Function
 
 If you need help with a specific function, let's say `barplot()`, you can type:
-
-
-```python
-import matplotlib.pyplot as plt
-```
 
 
 ```python

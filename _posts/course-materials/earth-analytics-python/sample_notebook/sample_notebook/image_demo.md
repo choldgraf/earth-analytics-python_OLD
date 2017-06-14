@@ -3,7 +3,7 @@ layout: single
 title: "TESTING"
 excerpt: "This lesson provides students wiht an example of a data driven report to emphsize the importance of connecting data, documentation and results."
 authors: ['Leah Wasser', 'NEON Data Skills', 'Mariela Perignon']
-modified: 2017-06-08
+modified: 2017-06-13
 category: [course-materials]
 class-lesson: ['TESTING']
 permalink: /course-materials/earth-analytics-python/week-1/TESTING/

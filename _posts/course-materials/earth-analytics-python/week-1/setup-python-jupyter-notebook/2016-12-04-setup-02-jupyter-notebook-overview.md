@@ -6,7 +6,7 @@ title: 'Get to Know RStudio'
 attribution: 'These materials were adapted from Software Carpentry materials by Earth Lab.'
 excerpt: 'This tutorial walks you through the Jupyter notebook interface.'
 dateCreated: 2016-12-12
-modified: 2017-06-08
+modified: 2017-06-13
 nav-title: 'Jupyter notebook Intro'
 week: 1
 sidebar:

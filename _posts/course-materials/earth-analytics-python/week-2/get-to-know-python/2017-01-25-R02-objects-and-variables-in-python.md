@@ -10,7 +10,7 @@ class-lesson: ['get-to-know-python']
 permalink: /course-materials/earth-analytics-python/week-2/objects-and-variables-in-python/
 nav-title: 'Objects in Python'
 dateCreated: 2017-05-23
-modified: 2017-06-06
+modified: 2017-06-13
 course: "earth-analytics-python"
 week: 2
 sidebar:
@@ -34,8 +34,8 @@ At the end of this activity, you will be able to:
 
 ## <i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What you need
 
-You need R and RStudio to complete this tutorial. Also we recommend have you
-have an `earth-analytics` directory setup on your computer with a `/data`
+You need `Python 3.x` and `Jupyter notebooks` to complete this tutorial. Also you should have
+an `earth-analytics` directory setup on your computer with a `/data`
 directory with it.
 
 * [How to Setup R / R Studio](/course-materials/earth-analytics-python/week-1/setup-r-rstudio/)
@@ -93,17 +93,19 @@ weight_kg
 
 
 
-## Use Useful Object Names
-# Be sure to fix the link below to reserved names for python if that exists...
-Objects can be given any name such as `x`, `current_temperature`, or
-`subject_id`. However, it is best to use clear and descriptive words when naming
-objects to ensure your code is easy to follow.
+## Expressive readable object names
 
-We will discuss best practicing for coding in this module - in the [clean coding
-lesson](/course-materials/earth-analytics-python/week-2/write-clean-code-with-r/).
+# Be sure to fix the link below to reserved names for python if that exists...
+
+We can name our objects in python anything that we want. For example: `x`, `current_temperature`, or
+`subject_id`. However, it is best to use clear, descriptive words when naming
+objects to ensure your code is easy to follow. Using a naming convention that explains to someone reading the code what the object is or in the case of a function, what it does, is often referenced as as element of Expressive Programming.  
+
+We will discuss best practicing for coding a bit later - in the [clean coding
+lesson](/course-materials/earth-analytics-python/week-2/write-clean-code-with-r/). For now, here are some tips to improve your code:
 
 1. **Keep object names short:** this makes them easier to read when scanning through code.
-2. **Use meaningful names:** For example: `precip` is a more useful name that tells us something about the object compared to `x`
+2. **Use meaningful / expressive names that describe the contents of the object that you are creating:** For example: `precip` is a more useful name that tells us something about the object compared to `x`
 3. **Don't start names with numbers!** Objects that start with a number are NOT VALID in R.
 4. **Avoid names that are existing functions in Python:** e.g.,
 `if`, `else`, `for`, see
@@ -111,7 +113,7 @@ lesson](/course-materials/earth-analytics-python/week-2/write-clean-code-with-r/
 
 A few other notes about object names in `Python`:
 
-* `R` is case sensitive (e.g., `weight_kg` is different from `Weight_kg`).
+* `Python` is case sensitive (e.g., `weight_kg` is different from `Weight_kg`).
 * Avoid other function names (e.g., `c`, `T`, `mean`, `data`, `df`, `weights`).
 * Use nouns for variable names, and verbs for function names.
 * Avoid using dots in object names - e.g. `my.dataset` - dots have a special meaning in R (for methods) and other programming languages. Instead use underscores `my_dataset`.
@@ -122,9 +124,10 @@ it to print the value by using parentheses or by typing the name:
 
 
 ```python
-weight_kg = 55  # Doesn't print anything 
-weight_kg # putting it at the end of a cell will print whatever is in the final line of the cell
-
+# here weight_kg is assigned to the value 55 however nothing is printed
+weight_kg = 55  
+# a variable name at the end of a cell will be printed by Jupyter notebook
+weight_kg 
 ```
 
 
@@ -134,7 +137,25 @@ weight_kg # putting it at the end of a cell will print whatever is in the final 
 
 
 
-Now that `Python` has `weight_kg` in memory, we can do arithmetic with it. For
+
+```python
+# python is case sensitive
+Weight_kg
+```
+
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    <ipython-input-2-b8c9261fc186> in <module>()
+    ----> 1 Weight_kg
+    
+
+    NameError: name 'Weight_kg' is not defined
+
+
+Now that `Python` has stored `weight_kg` in memory, we can do arithmetic with it. For
 instance, we may want to convert this weight in pounds (weight in pounds is 2.2
 times the weight in kg):
 
@@ -150,12 +171,7 @@ times the weight in kg):
 
 
 
-
-
-We can also change a variable's value by assigning it a new one:
-
-
-
+We can also change a variable's value by assigning it a new value:
 
 
 ```python
@@ -170,8 +186,8 @@ weight_kg = 57.6
 
 
 
-This means that assigning a value to one variable does not change the values of
-other variables.  For example, let's store the animal's weight in pounds in a new
+Assigning a value to one variable does not change the values of
+other variables. For example, let's store the animal's weight in pounds in a new
 variable, `weight_lb`:
 
 
