@@ -10,7 +10,7 @@ class-lesson: ['get-to-know-python']
 permalink: /course-materials/earth-analytics-python/week-2/python-syntax-and-using-functions/
 nav-title: 'Get to Know Python'
 dateCreated: 2017-05-23
-modified: 2017-06-06
+modified: 2017-06-08
 module-title: 'Get to Know the Python programming language'
 module-nav-title: 'Get to Know Python'
 module-description: 'This module introduces the Python scientific programming language.
@@ -40,7 +40,8 @@ as used in `Python`.
 ## <i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives
 At the end of this activity, you will be able to:
 
-* Understand the basic concept of a function and be able to use a function in your code.
+* Describe what a function is and how it is used in scientific programming
+* Use functions in python including os.chdir() to set your working directory.
 * Use the assignment operator in Python (`=`) to create a new variable or object.
 
 ## <i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> What you need
@@ -66,10 +67,10 @@ syntax of the `Python` programming language. We will learn how to:
 2. work with vector objects in `python` and
 3. import data into a pandas `data.frame` which is the `python` equivalent of a spreadsheet.
 
-Let's start by looking at the code we used last week. Here, we
+Let's start by considering at the code we used last week. In the code that we used last week we
 
 1. Downloaded some data from figshare using the `urllib.request.urlretrieve` function which is a part of the `urllib` library that comes with python 3.x .
-2. Imported the data into r using the `pd.read_csv` function
+2. Imported the data into r using the `pd.read_csv()` function
 3. Plotted the data using the `.plot()` function (which is a part of the `pandas` library and utilizes matplotlib plotting)
 
 We used the following libraries to perform these tasks:
@@ -78,28 +79,45 @@ We used the following libraries to perform these tasks:
 * urllib
 * os (used to ensure our working directory was correct).
 
-In this lesson we will also use numpy - a library that is commonly used in python to support mathametical operations. 
 
 
 ```python
-#import earthlab as et
+# can we please 
 import pandas as pd
 import numpy as np
 import urllib
 import os
+# Force notebooks to plot figures inline (in the notebook)
+plt.ion()
+# download file from Earth Lab figshare repository
+urllib.request.urlretrieve(url='https://ndownloader.figshare.com/files/7010681', 
+                           filename= 'data/boulder-precip.csv')
+# open data
+data = pd.read_csv('data/boulder-precip.csv')
+data.plot(x='DATE', 
+          y='PRECIP')
 ```
 
-Notice that at the top of our script we also set the working directory. We use the `.chdir()` function from the `os` library to set the working directory in python. Set your working directory to the earth-analytics directory that you created last week. Your path should look something like this:
+In this lesson we will walk through the code that we used last week to create our first plot. We will also use functions in the numpy library - a library that is commonly used in python to support mathametical operations. 
+
+## Explore our code
+Let's take a few minutes to explore the code above to better understand what each part does. To begin, we set our working directory. 
+
+We use the `.chdir()` function from the `os` library to set the working directory in python. Set your working directory to the earth-analytics directory that you created last week. Your path should look something like this:
 
 `/Users/your-user-name/Documents/earth-analytics/`
 
 `os.getcwd()` can be used to check your current working directory. 
 
 
-
 ```python
 # be sure to set your working directory\n",
 os.chdir("/Users/lewa8222/Documents/earth-analytics/")
+```
+Once we have changed our working directory, we can check it too using `os.getcwd()`. 
+
+
+```python
 # check to ensure your working directory is set properly
 os.getcwd()
 ```
@@ -111,7 +129,26 @@ os.getcwd()
 
 
 
-Finally we want to ensure that our plots are visible in jupyter notebooks. To force python to render them in the notebook, we can use 
+Next we load the required libraries. If you remember from the [week 1 homework, ]({{ site.url }}/course-materials/earth-analytics-python/week-1/install-r-packages/) libraries contain sets of tools, known as functions that perform commonly done tasks. For instance. the chdir() function in the OS library allows you to set the working directory that you want to work in. In order to use the chdir() function, you need to load the os library using the syntax
+
+`import os`
+
+which tells python to import all of the functions from the os library. 
+
+Important: remember that we are loading all of our libraries at the TOP of our code. This ensures that someone else looking at the code knows exactly what libraries they need to have installed BEFORE running your code! 
+
+
+```python
+# load libraries
+import pandas as pd
+import numpy as np
+import urllib
+import os
+```
+
+## Plots in Jupyter notebooks
+
+Plots don't render by default inline or on the screen where your code is in Python. To ensure that plots render in a Jypter notebook rather than in a separate python window which is the default, we use the function: 
 
 `plt.ion()`
 
@@ -121,7 +158,8 @@ Finally we want to ensure that our plots are visible in jupyter notebooks. To fo
 plt.ion()
 ```
 
-Let's next break our script down. 
+## Download data from a website
+
 Once we have called all of the required libraries, we downloaded a file from figshare. 
 We used the `urllib.request.urlretrieve` function to download data into the data/ directory within our earth-analytics working directory. 
 
@@ -130,7 +168,7 @@ Notice that this **function** has two arguments
 1. **url=** the url where our data is located online
 2. **filename=** the location and name of the file that we are downloading. Here we downloaded the data to data/boulder-precip.csv. Thus the file will be called boulder-precip.csv and it will be located in the data directory of our working directory.
 
-NOTE: this download won't work if this directory doesn't already exist! 
+NOTE: this download won't work if the `data/` directory doesn't already exist! 
 
 
 ```python
@@ -151,13 +189,18 @@ If the data downloaded correctly, you will recieve a message from python
 
 `('data/boulder-precip.csv', <http.client.HTTPMessage at 0x1186c06d8>)` confirming that the data were downloaded.
 
-Next, we opened the data in python. TO do this, we used the read_csv function from the pandas library. 
+## Open data in python
+
+Next, we opened the data in python. To open a .csv file in Python, we use the `read_csv()` function from the `pandas` library. 
 
 
 ```python
 # open data
 data = pd.read_csv('data/boulder-precip.csv')
 ```
+
+
+### Explore tabular data in python
 
 In python / pandas we can access 'columns' in our data using the syntax:
 
@@ -306,7 +349,7 @@ data.plot(x='DATE',
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R01-python-syntax-and-using-basic-functions_18_1.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R01-python-syntax-and-using-basic-functions_20_1.png)
 
 
 Notice that the plot above doesn't look exactly the way we may want it to look. We'll learn how to further customize plots in a later lesson. 
@@ -746,7 +789,7 @@ data.plot()
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R01-python-syntax-and-using-basic-functions_41_1.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R01-python-syntax-and-using-basic-functions_43_1.png)
 
 
 
@@ -764,7 +807,7 @@ data.plot(x='DATE',
 
 
 
-![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R01-python-syntax-and-using-basic-functions_42_1.png)
+![png](../../../../../images/course-materials/earth-analytics-python/week-2/get-to-know-python/2017-01-25-R01-python-syntax-and-using-basic-functions_44_1.png)
 
 
 ### Base functions vs. packages
