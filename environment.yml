@@ -27,3 +27,4 @@ dependencies:
       - nbgrader
       - mne
       - tqdm
+      - git+https://github.com/geopandas/geopandas.git
